@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${categoryname!}</title>
+</head>
+<body>
+内容分頁
+<br>
+###################################
+<br>
+<#cms_content_page  siteId="${siteId}"  titleLen="5" page="${page}"  var="content"> 
+<br>
+${content.title!}<br>
+----------------------------------------
+<br>
+</#cms_content_page> 
+<br>
+<#cms_pagination siteId="${siteId}" channelName="news" page="${page!}" action="${action!}"  var="page" > 
+${page.last}
+@for( change in page.changePage){
+@if(!change.isLink){
+${change.value!}
+@}else{
+${change.url!}
+@}
+@}
+${page.next}
+</#cms_pagination> 
+<br>
+###################################
+<br>
+###################################
+<br>
+<#cms_modelfiled_find siteId="1"  channelId="4" modelId="47" filedName="test" param="${param!}"  var="filed">
+   <br>TAG： <a href="${filed.url!}">${filed.name!}</a><br>
+</#cms_modelfiled_find> 
+<br>
+<br>
+<#cms_modelfiled_find siteId="1"  channelId="4" modelId="47" filedName="f2"  var="filed">
+   <br>f2： <a href="${filed.url!}">${filed.name!}</a><br>
+</#cms_modelfiled_find> 
+<br>
+###################################
+<br>
+处理时间：${processTime!}
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <LINK rel="Bookmark" href="/favicon.ico">
+    <LINK rel="Shortcut Icon" href="/favicon.ico"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/css/style.css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>添加模型 - 模型管理 - ${powered!}</title>
+</head>
+
+<body>
+<article class="page-container">
+    <form action="${managePath}/model/filed/save" method="post" class="form form-horizontal" id="form-modelfiled-add">
+        <input type="hidden" name="modelFiled.model_id" value="${modelId!}">
+        <input type="hidden" name="modelFiled.filed_id" value="${modelFiled.filedId!}">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>字段名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" name="modelFiled.filed_name"
+                       value="${modelFiled.filed_name!}" placeholder="字段名称">
+            </div>
+        </div>
+        @if(isEmpty(modelFiled.filedId)){
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>字段别名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" name="modelFiled.alias"
+                       value="${modelFiled.alias!}" placeholder="字段别名">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>字段类型：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select id="filedClass" class="input-text" name="modelFiled.filed_class">
+                    <option value="none">-</option>
+                    <option value="input">单行文本</option>
+                    <option value="textarea">多行文本</option>
+                    <option value="editor">文本编辑器</option>
+                    <option value="radio">单选框</option>
+                    <option value="picture">图片上传</option>
+                    <option value="file">文件上传</option>
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>类型参数：</label>
+            <div id="configContent" class="formControls col-xs-8 col-sm-9">
+                请选择
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                字段类别：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select id="filedType" class="input-text" name="modelFiled.filed_type">
+                    <option value="none">-</option>
+                    <option value="int">整型</option>
+                    <option value="char">字符类型</option>
+                    <option value="varchar">文字类型</option>
+                    <option value="text">文本类型</option>
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                <span class="c-red">*</span>类别参数：</label>
+            <div id="typeContent" class="formControls col-xs-8 col-sm-9">
+                请选择
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                允许空：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select id="filedType" class="input-text" name="modelFiled.not_null">
+                    <option value="true">允许空</option>
+                    <option value="false">不允许空</option>
+                </select>
+            </div>
+        </div>
+        @}
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit"
+                       value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+    $(function () {
+        $("#filedClass").change(function () {
+            SelectChange();
+
+        });
+        function SelectChange() {
+            var selectValue = $("#filedClass").val();
+            appendFliedclassValue(selectValue);
+        }
+
+        function appendFliedclassValue(selectValue) {
+            var content = $("#configContent");
+            if (selectValue == 'input') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_value\""
+                        + "value=\"${modelFiled.filedValue!}\" placeholder=\"字段默认值\">");
+            }
+            if (selectValue == 'textarea') {
+
+                content.html("<textarea type=\"text\" class=\"textarea\" name=\"modelFiled.filed_value\""
+                        + " placeholder=\"字段默认值\">${modelFiled.filedValue!}</textarea>");
+            }
+            if (selectValue == 'radio') {
+
+                content.html("<textarea type=\"text\" class=\"textarea\" name=\"modelFiled.filed_value\""
+                        + " placeholder=\"选项值用“#”隔开\">${modelFiled.filedValue!}</textarea>");
+            }
+            if (selectValue == 'editor') {
+
+                content.html("<textarea type=\"text\" class=\"textarea\" name=\"modelFiled.filed_value\""
+                        + " placeholder=\"字段默认值\">${modelFiled.filedValue!}</textarea>");
+            }
+            if (selectValue == 'file') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_value\""
+                        + "value=\"${modelFiled.filedValue!}\" placeholder=\"允许上传的文件类型，如：txt | zip\">");
+            }
+            if (selectValue == 'picture') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_value\""
+                        + "value=\"${modelFiled.filedValue!}\" placeholder=\"允许上传的文件类型，如：img | png\">");
+            }
+            if (selectValue == 'none') {
+
+                content.html("请选择");
+            }
+        }
+
+        $("#filedType").change(function () {
+            SelectChangeType();
+
+        });
+
+        function SelectChangeType() {
+            var selectValue = $("#filedType").val();
+            appendFliedtype(selectValue);
+        }
+
+        function appendFliedtype(type) {
+            var content = $("#typeContent");
+            if (type == 'int') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_length\""
+                        + "value=\"11\" placeholder=\"字段默认值\">");
+            }
+            if (type == 'char') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_length\""
+                        + "value=\"50\" placeholder=\"字段默认值\">");
+            }
+            if (type == 'varchar') {
+
+                content.html("<input type=\"text\" class=\"input-text\" name=\"modelFiled.filed_length\""
+                        + "value=\"255\" placeholder=\"字段默认值\">");
+            }
+            if (type == 'text') {
+
+                content.html("text");
+            }
+            if (type == 'none') {
+
+                content.html("可选 - 字段类别参数长度不能越界，存储类型必须一致");
+            }
+        }
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-modelfiled-add").validate({
+            rules: {
+                "modelFiled.alias": {
+                    required: true,
+
+                },
+                "modelFiled.filed_name": {
+                    required: true,
+                    valiEnglish: true,
+                    remote: "${managePath}/model/filed/validateFiledname"
+                },
+                "modelFiled.filed_class": {
+                    required: true,
+                    remote: "${managePath}/model/filed/validateFiledClass/${modelId!}"
+                }
+
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit();
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.$('.btn-refresh').click();
+                parent.layer.close(index);
+            }
+        });
+    });
+
+    jQuery.validator.addMethod("valiEnglish", function (value, element) {
+                return this.optional(element) || /^[a-zA-Z ]*$/.test(value);
+            }, $.validator.format("请输入字母")
+    );
+</script>
+</body>
+
+</html>

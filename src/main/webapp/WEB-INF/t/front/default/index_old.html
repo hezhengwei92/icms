@@ -1,0 +1,2596 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="360-site-verification" content="936014c81c92e420b1f8d30bebc4d770" />
+<title>立帮集团官方网站 ● 一站式企业服务平台</title>
+<meta name="keywords" content="立帮，立帮官网，甘肃立帮集团，一站式企业服务平台，立帮" />
+<meta name="description" content="立帮集团,一站式企业服务平台,中国企业服务领域业态最全的综合性集团,上市企业,创建于1996年,为企业提供全方位的服务,致力于解决企业发展过程中的障碍,让你的企业专注于你的发展,立帮集团旗下主要包括12家专业致力于企业服务的子公司，拥有包括工商注册、资质办理、会计代理、验资审计、网站建设、知识产权、企业培训咨询、软件定制及开发、贷款等方面共计600余项服务。" />
+<meta name="laoniu-site-verification" content="6ae0f173d3e55f7f7af5ee3f95ff9a0" />
+<meta name="baidu-site-verification" content="6NnrIwnH30" />
+<link rel="stylesheet" type="text/css" href="${res}/site/css/pt-main.css"/>
+<!--新的尾部-->
+<link rel="stylesheet" type="text/css" href="${res}/site/css/newfooter.css"/>
+<!--新的尾部end-->
+<script src="${res}/site/js/jquery-1.11.min.js"></script>
+<script src="${res}/site/js/jquery-ui-1.11.0.min.js"></script>
+<script type="text/javascript" src="${res}/site/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="${res}/site/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="${res}/site/js/jquery-1.10.2.min.js"></script>
+<script>
+jQuery(document).ready( 	
+			function($){ 
+				$("img").lazyload({ 
+				placeholder : "${res}/site/img/grey.gif",  
+					effect      : "fadeIn",
+					threshold : 200
+				}); 
+			}); 
+ window.localStorage.getItem('fontello:sessions:v4');'fontello:sessions:v4'
+</script>
+<style>
+    .tab_foot li{margin-right: 25px;margin-left: 25px;}
+</style>
+<!--[if lte IE 7]>
+<style>
+	.ficon{font-family:'fontello'};
+
+</style>
+<![endif]-->
+
+<base target="_blank" />
+<meta name="laoniu-site-verification" content="6ae0f173d3e55f7f7af5ee3f95ff9a0" />
+<link href="${res}/site/css/zzsc.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="${res}/site/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="${res}/site/js/zzsc.js" ></script>
+</head>
+
+<body>
+<a href="#" title="站内客服"; target="_blank"><img src="${res}/site/img/xinxi.png" style="position:fixed; top:300px; left:-1px;" /></a>
+<div id="top"></div>
+<!--头部开始-->
+
+<script type="text/javascript" src="${res}/site/js/layer.js"></script>
+<script src="${res}/site/js/superslide.js"></script>
+<script src="${res}/site/js/box-slider-all.jquery.min.js"></script>
+<script type="text/javascript" src="${res}/site/js/modernizr.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="${res}/site/css/add-main.css"/>
+<script type="text/javascript">
+    function hb(guwen) {
+        var tel = /^[1][0-9]{10}$/;
+        var phone = $("#tankBox2 .zx_phone").val();
+        if (!tel.test(phone)) {
+            $("#tankBox2 .zx_phone").val("请输入正确的手机号码！");
+        } else {
+        	$.ajax({
+                type:"GET",
+                url:"http://123.56.200.116/baidu/index.php?m=formguide&c=index&a=tel",
+                data:{"CalleeNbr":phone,"CallerNbr":phone},
+                dataType:"JSONP",
+                jsonp:"callbackfun",
+                success:function(data){
+                    if(data.Result == 1){
+                        layer.alert("稍后你将接到我们的电话，该通话对你完全免费，请放心接听");
+                    }else{
+                        layer.alert("呼叫失败请联系客服");
+                    }
+                }
+            });
+        // $.ajax({
+        //     type: "GET",
+        //     url: "http://zx.cddgg.net/index.php?m=formguide&c=index&a=tel",
+        //     data: { "info[username]": "dinggua", "info[password]": "e115bc404c7749385936f24c523b2016", "info[CallerNbr]": guwen, "info[CalleeNbr]": phone, "info[AnswerOnMedia]": 1, "info[DisplayNbrMode]": 1, "info[Record]": 0 },
+        //     dataType: "JSONP",
+        //     jsonp: "callbackfun",
+        //     success: function(data) {
+        //         if (data.Result == 1) {
+        //             var html = '<p>为您呼出的电话号码为”<span>'+guwen+'</span>”请您注意接听！</p>\
+        // </div>';
+        //             $("#tankBox2 .jt_kf").html(html);
+        //         } else {
+        //             alert(data.ResultDesc);
+        //         }
+        //     }
+        // });
+        }
+    }
+    
+    function tank(id) {
+        $.ajax({
+        url: "/CounselorList/ajaxgetguwen",
+            data: {id: id },
+            type: "POST",
+            dataType: "json",
+            success: function(data) {
+                layer.open({
+                    type: 1,
+                    title: ['免费电话咨询', 'background:#fff;color:#525252;'],
+                    skin: 'layui-layer-rim',
+                    area: ['520px', '410px'],
+                    content: '<div class="tankbox" id="tankBox2">\
+                <div class="free">\
+                    <div class="f_pic"><img src="' + data.portrait + '" alt=""/></div>\
+                    <h3>' + data.trueName + '</h3>\
+                    <table class="jt_kf">\
+                        <tr>\
+                            <th>请输入您的电话号码：</th>\
+                            <td><input class="zx_phone" type="text" placeholder="请输入电话号码"/></td>\
+                        </tr>\
+                        <tr>\
+                            <th></th>\
+                            <td><input onclick="hb('+data.tel+')" type="submit" value="开始免费电话咨询"/></td>\
+                        </tr>\
+                    </table>\
+                </div>\
+            </div>'
+                });
+            }
+        });
+    }
+
+    $(function () {
+        var $box = $('#box')
+          , $indicators = $('.goto-slide')
+          , $effects = $('.effect')
+          , $timeIndicator = $('#time-indicator')
+          , slideInterval = 5000;
+
+        var switchIndicator = function ($c, $n, currIndex, nextIndex) {
+          $timeIndicator.stop().css('width', 0);
+          $indicators.removeClass('current').eq(nextIndex).addClass('current');
+        };
+
+        var startTimeIndicator = function () {
+          $timeIndicator.animate({width: '7100px'}, slideInterval);
+        };
+
+        // initialize the plugin with the desired settings
+        $box.boxSlider({
+            speed: 1000
+          , autoScroll: true
+          , timeout: slideInterval
+          , next: '#next'
+          , prev: '#prev'
+          , pause: '#pause'
+          , effect: 'scrollVert3d'
+          , blindCount: 15
+          , onbefore: switchIndicator
+          , onafter: startTimeIndicator
+        });
+
+        startTimeIndicator();
+
+        // pagination isn't built in simply because it's easy to
+        // roll your own with the plugin API methods
+        $('#controls').on('mouseover', '.goto-slide', function (ev) {
+          $box.boxSlider('showSlide', $(this).data('slideindex'));
+          ev.preventDefault();
+        });
+
+        $('#effect-list').on('mouseover', '.effect', function (ev) {
+          var $effect = $(this);
+
+          $box.boxSlider('option', 'effect', $effect.data('fx'));
+          $effects.removeClass('current');
+          $effect.addClass('current');
+
+          switchIndicator(null, null, 0, 0);
+          ev.preventDefault();
+        });
+    });
+    $(function(){
+        /*$(".Ranking-list li:last").css("border","none");*/
+        $(".Ranking-list li:eq(0)").find("i").addClass("bg");
+        $(".Ranking-list li:eq(1)").find("i").addClass("bg");
+        $(".Ranking-list li:eq(2)").find("i").addClass("bg");
+        
+        $(".nav-pull-box-ul li:last").css("border-top","none");
+        $(".ind-navbox li:last").addClass("last");
+        $(".ind-navbox").find("li.last").mouseenter(function(){
+            $(this).find(".img-dow").stop(false,true).fadeIn();
+        });
+        $(".ind-navbox").find("li.last").mouseleave(function(){
+            $(this).find(".img-dow").stop(false,true).fadeOut();
+        });
+        /*
+        $(".navPull").mouseenter(function(){
+            $(this).find(".navPulldown").stop(false,true).fadeIn();
+        });
+        $(".navPull").mouseleave(function(){
+            $(this).find(".navPulldown").stop(false,true).fadeOut();
+        });
+        $(".navPullsub").mouseenter(function(){
+            $(this).children('a').addClass("active");
+            $(this).children(".navPullBox").stop(false,true).fadeIn();
+        });
+        $(".navPullsub").mouseleave(function(){
+            $(this).children('a').removeClass("active");
+            $(
+        */
+
+       $(".navPullsub").mouseenter(function(){
+                $(this).children('a').addClass("active");
+                $(this).children(".navPullBox").stop(false,true).show();
+            });
+            $(".navPullsub").mouseleave(function(){
+                $(this).children('a').removeClass("active");
+                $(this).children(".navPullBox").stop(false,true).hide();
+            });
+
+        $(".Ranking-list").slide({mainCell:".bd",autoPlay:true,effect:"topMarquee",vis:5,interTime:100,trigger:"click"});
+    });
+</script>
+<style>
+    .visiting_card p{line-height:normal;}
+	*{padding:0; margin:0 auto;}
+	.size1{width:286px; height:90px;}
+	.visiting_card .img_size{float:left;}
+	.visiting_card .img_size img{display:block; width:100%;}
+	.size1 .img_size{width:82px; height:90px; overflow:hidden;}
+	.visiting_card .detail{float:left;}
+	.size1 .detail{width:204px; height:90px;}
+	.size1 .detail .tit{padding:10px 0 0 5px; overflow:hidden; position:relative}
+	.size1 .detail .tit .name{display:block; font-weight:600; float:left; font-size:23px;}
+	.size1 .detail .tit .position{height:20px; display:block; float:left; margin:2px 0 0 12px; position:relative; padding:0 11px;  color:#fff; font-size:12px; line-height:20px;}
+	.size1 .detail .tit .position em{ position:absolute; left:-10px; top:28%; border:5px solid transparent; }
+	.size1 .detail .number{font-weight:bold; font-size:15px; padding:5px 8px;}
+	.size1 .detail .mobile{color:#fff; font-size:14px;  margin-top:2px; text-align:center; font-size:13px; height:18px; line-height:18px;}
+	.size1 .detail .mobile .bz{display:inline-block; font-size:12px; padding:0 10px; height:18px; line-height:18px; }
+	.size2{height:65px; width:232px;}
+	.size2 .img_size{width:60px; height:65px; overflow:hidden;}
+	.size2 .detail{width:172px; height:65px;}
+	.size2 .detail .tit{padding:5px 0 0 5px; overflow:hidden; position:relative}
+	.size2 .detail .tit .name{display:block; font-weight:600; float:left; font-size:16px;}
+	.size2 .detail .tit .position{height:16px; display:block; float:left; margin:2px 0 0 12px; position:relative; padding:0 6px;  color:#fff; font-size:12px; line-height:16px;}
+	.size2 .detail .tit .position em{ position:absolute; left:-8px; top:28%; border:4px solid transparent; }
+	.size2 .detail .number{font-weight:600; font-size:10px; padding:0px 0 0px 5px;}
+	.size2 .detail .mobile{color:#fff; font-size:12px; text-align:center;}
+	.size2 .detail .mobile .bz{display:inline-block; font-size:12px; margin-left:12px; height:18px; line-height:18px; }
+	.color1 .detail{background:#f4f4f4;}
+	.color1 .detail .tit .name{color:#d96648; }
+	.color1 .detail .tit .position{background-color:#d96648;}
+	.color1 .detail .tit .position em{border-right-color:#d96648;}
+	.color1 .detail .number{color:#854d8f;}
+	.color1 .detail .mobile{background-color:#d96749;}
+	.color2 .detail{background-color:#eeebee;}
+	.color2 .detail .tit .name{color:#854d8f; }
+	.color2 .detail .tit .position{background-color:#854d8f;}
+	.color2 .detail .tit .position em{border-right-color:#854d8f;}
+	.color2 .detail .number{color:#e15b1e; }
+	.color2 .detail .mobile{background-color:#854d8f; }
+	.color3 .detail{background-color:#ebf0e8;}
+	.color3 .detail .tit .name{color:#6ea847; }
+	.color3 .detail .tit .position{background-color:#e19b00;}
+	.color3 .detail .tit .position em{border-right-color:#e19b00;}
+	.color3 .detail .number{color:#6ea847; }
+	.color3 .detail .mobile{background-color:#6ea847; }
+	.color4 .detail{background-color:#eceef3;}
+	.color4 .detail .tit .name{color:#234789; }
+	.color4 .detail .tit .position{background-color:#234789;}
+	.color4 .detail .tit .position em{border-right-color:#234789;}
+	.color4 .detail .number{color:#871e90; }
+	.color4 .detail .mobile{background-color:#234789; }
+	.color5 .detail{background-color:#ede6ee;}
+	.color5 .detail .tit .name{color:#871e90; }
+	.color5 .detail .tit .position{background-color:#ea8a1c;}
+	.color5 .detail .tit .position em{border-right-color:#ea8a1c;}
+	.color5 .detail .number{color:#234789; }
+	.color5 .detail .mobile{background-color:#871e90; }
+	.color6 .detail{background-color:#f5ece9;}
+	.color6 .detail .tit .name{color:#dc4e2a; }
+	.color6 .detail .tit .position{background-color:#dc4e2a;}
+	.color6 .detail .tit .position em{border-right-color:#dc4e2a;}
+	.color6 .detail .number{color:#dc4e2a; }
+	.color6 .detail .mobile{background-color:#f5ae3a; }
+	.color7 .detail{background-color:#eff3ec;}
+	.color7 .detail .tit .name{color:#7aa35d; }
+	.color7 .detail .tit .position{background-color:#7aa35d;}
+	.color7 .detail .tit .position em{border-right-color:#7aa35d;}
+	.color7 .detail .number{color:#7aa35d; }
+	.color7 .detail .mobile{background-color:#f5ae3a; }
+	.color8 .detail{background-color:#e9f1f3;}
+	.color8 .detail .tit .name{color:#e4664f; }
+	.color8 .detail .tit .position{background-color:#e4664f;}
+	.color8 .detail .tit .position em{border-right-color:#e4664f;}
+	.color8 .detail .number{color:#e4664f; }
+	.color8 .detail .mobile{background-color:#7ca7ad; }
+	.color9 .detail{background-color:#f4eeed;}
+	.color9 .detail .tit .name{color:#ee9b35; }
+	.color9 .detail .tit .position{background-color:#ee9b35;}
+	.color9 .detail .tit .position em{border-right-color:#ee9b35;}
+	.color9 .detail .number{color:#ee9b35; font-size:12px;}
+	.color9 .detail .mobile{background-color:#b1897e; }
+	.color10 .detail{background-color:#f5f1eb;}
+	.color10 .detail .tit .name{color:#ea8a1c; }
+	.color10 .detail .tit .position{background-color:#ea8a1c;}
+	.color10 .detail .tit .position em{border-right-color:#ea8a1c;}
+	.color10 .detail .number{color:#ea8a1c; }
+	.color10 .detail .mobile{background-color:#a37bad; }
+	.color11 .detail{background-color:#eff6f1;}
+	.color11 .detail .tit .name{color:#54a56a; }
+	.color11 .detail .tit .position{background-color:#e19b00;}
+	.color11 .detail .tit .position em{border-right-color:#e19b00;}
+	.color11 .detail .number{color:#e19b00; }
+	.color11 .detail .mobile{background-color:#54a56a; }
+
+    /*头部滑块名片*/
+    *{padding:0; margin:0 auto;}
+    .guwen-top{width:1200px;height:100px;margin:0px auto;overflow: hidden;}
+    .guwen-top>li{width:100%;overflow: hidden;float: left;}
+    .guwen-top>li .li-box{width:285px;height:84px;float:left;margin-right:20px;background: #f7f7f7;overflow: hidden;}
+    .guwen-top>li .li-box:last-child{margin-right: 0;}
+    .guwen-top .img_size{float:left;}
+    .guwen-top .img_size img{display:block; width:100%;}
+    .guwen-top .img_size{width:82px; height:90px; overflow:hidden;}
+    .guwen-top .detail{float:right;}
+    .guwen-top .detail{width:162px; height:84px;padding-left:30px;}
+    .guwen-top .detail .tit{height:33px;line-height:33px;font-family:"微软雅黑";font-size:12px;color:#666;overflow:hidden;}
+    .guwen-top .detail .tit b{vertical-align: middle;}
+    .guwen-top .detail .tit span{font-size:20px;color:#004b92;}
+    .guwen-top .detail .number{line-height: 20px;font-size:12px;color:#666666;}
+    .guwen-top .detail .number .xx { width: 60px; height: 12px; overflow: hidden; display: inline-block; text-indent: -999px; margin: 1px 5px 0 0; background: url(img/star.png) 0 -12px no-repeat;}
+    .guwen-top .detail .number .xx .xxp { width: 60px; height: 12px; overflow: hidden; display: inline-block; float: left; text-indent: -999px; background: url(img/star.png) 0 0 no-repeat;}
+    .guwen-top .detail .mobile{display:block;width: 110px;height:24px;line-height:24px;margin-left:0;background: #27b849;border-radius:2px;text-align:center;color:#fff;font-size:12px;}
+    .guwen-top .detail .mobile img{vertical-align: middle;margin-right: 3px;}
+    .guwen-top .detail .mobile:hover{background: #45b887;}
+
+    /*弹出层样式*/
+    .free{width: 80%;margin:35px auto;text-align:center;overflow: hidden;}
+    .free .f_pic{height: 118px;border-radius: 50%;overflow: hidden;}
+    .free .f_pic img{width: 118px;height: 118px;border-radius: 50%;}
+    .free h3{margin:10px auto;font-size: 20px;color: #0982c8;}
+    .free p{color:#313131;font-size: 14px;}
+    .free p span{color: #ff9600}
+    .free table{font-size: 14px;}
+    .free table th{color: #313131;font-weight: normal;}
+    .free table td{padding: 7px 0;text-align: left;}
+    .free table input[type="text"]{width:186px;height: 33px;line-height: 33px \9;padding:0 10px;border: 1px solid #b2b2b2;}
+    .free table input[type="submit"]{width:137px;height: 34px;line-height: 34px;background:#0f84d6;color: #fff;border: 0;cursor: pointer;}
+</style>
+
+<div id="header">
+	<div class="top">
+    	<div class="main_wrap">
+            <div class="fl" style="position:relative;bottom:40px;">
+                <span>你好，欢迎光临甘肃立帮科技发展集团！</span>
+								<!--<a href="/welcome/login" rel="nofollow">登录</a><a href="/welcome/register" rel="nofollow">注册</a><a href="/welcome/forget_password" rel="nofollow">忘记密码</a>-->
+				            </div>
+			
+            <div class="fr" style="position:relative; bottom:80px;height:70px;">
+                <div class="rtop">
+                    <div class="xlb">
+                        <a href="/abouts/" rel="nofollow" id="gy">登录</a>
+                        <ul class="hul" id="gy1">
+                            <li><a rel="nofollow" href="/abouts/"><sapn style="margin-left:9px;">免费注册</span></a></li>
+                            <li><a href="/hr/" rel="nofollow"></a></li>
+                        </ul>
+                    </div>
+                    <div class="xlb">
+                        <a href="/hr/" rel="nofollow" id="jt">免费注册</a>
+                        <ul class="hul" id="jt1">
+                            <li><a href="/category/39" rel="nofollow">搜索职位</a></li>
+                            <li><a href="/category/41" rel="nofollow">成长空间</a></li>
+                            <li><a href="/category/40" rel="nofollow">办公环境</a></li>
+                            <li><a href="/category/42" rel="nofollow">应聘指南</a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="">积分兑换</a><a rel="nofollow" href="http://dggmis.com:8686/obpm/" target="_blank">信息化管理</a> -->
+					<a href="" class="wx" rel="nofollow" id="weixin">微信关注</a>
+					<div class="wx_img" id="weixin1"><img src="${res}/site/img/wx-jt.jpg"; style="margin-left:5px; margin-top:-10px;" /></div></a>
+					<a href="/contact/" id="jtfgs" target="_blank" rel="nofollow">400-1891871
+					</a></div>
+					<div id="jtfgsdiv" style='border:5px solid black;width:320px;height:50px; position:absolute;z-index:999;bottom:-120px;right:-60px; background-color:#404144; display:none; z-index:9999'>
+					<a href='/counselorlist/?b=1' target="_blank" rel="nofollow">&nbsp;工商服务</a>
+					<a href='/counselorlist/?b=2' target="_blank" rel="nofollow">&nbsp;知识产权</a>
+					<a href='/counselorlist/?b=3' target="_blank" rel="nofollow">&nbsp;网站建设</a>
+					<a href='/counselorlist/?b=4' target="_blank" rel="nofollow">&nbsp;金融服务</a>
+					<a href='/counselorlist/?b=5' target="_blank" rel="nofollow">&nbsp;品牌服务</a>
+					<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;法律服务</a>
+					<a href='/counselorlist/?b=7' target="_blank" rel="nofollow">&nbsp;商业地产</a>
+					<a href='/counselorlist/?b=8' target="_blank" rel="nofollow">&nbsp;建筑资质</a>
+					<a href='/counselorlist/?b=9' target="_blank" rel="nofollow">&nbsp;办公装修</a>
+					<a href='/counselorlist/?b=10' target="_blank" rel="nofollow">&nbsp;财税服务</a>
+					<a href='/counselorlist/?b=11' target="_blank" rel="nofollow">&nbsp;其他服务</a>
+					<a href='http://www.cddgg.net' target="_self" rel="nofollow">&nbsp;投行事业部</a>
+					<a href='http://www.cddgg.net' target="_self" rel="nofollow">&nbsp;企业孵化器事业部</a>
+					<!--<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;企业培训</a>
+					<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;装饰装修</a>
+					<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;商业地产</a>
+					<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;品牌logo设计</a>
+					<a href='/counselorlist/?b=6' target="_blank" rel="nofollow">&nbsp;商标专利申请</a>-->
+					</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--top end-->
+	<div class="clearfix"></div>
+    <div class="main_wrap">
+                    <div class="main_wrap" style="position:relative; top:-50px;">
+                <div class="ui-logo fl">
+                    <a href="/"><img src="${res}/site/img/logo.png" alt="立帮" /></a>
+                    <div class="logo-title">
+                        <h3>企业一站式服务平台</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-header-search fl" >
+            	<form data-process="1" id="j-header-searchform" action="/search/so/" method="post" class="ui-form-search" >
+                <div class="input-append" style="position: relative; top:-50px;"  >
+                <div class="ui-dropdown hover" id="j-header-searchwrap"><span class="ui-dropdown-hd">
+                <span id="j-header-searchlabel" >找服务</span></span><ul class="unstyled ui-dropdown-menu" style="display: none;">
+                <li data-type="witkey" style="display: list-item;"><a href="javascript:;" target="_self" data-linkid="search-type-switch-witkey">找服务</a></li>
+                <li class="hide" data-type="task" style="display: list-item;"><a href="javascript:;" target="_self" data-linkid="search-type-switch-task">找顾问</a></li>
+                </ul></div>
+                <input data-type="service" name="key" value="" id="j-header-kw" type="text" class="search-query" autocomplete="off" disableautocomplete="" autocorrect="off" onwebkitspeechchange="this.form.submit();" lang="zh-CN" x-webkit-grammar="builtin:search" x-webkit-speech="true"><button type="submit" id="j-header-search-btn" class="ui-btn ui-btn-inverse yahei">搜索</button>
+                </div><input type="hidden" name="type" id="j_header_search_type" value="找服务"></form>
+                <div class="ui-header-search-hotwords">
+                    <!--热门搜索：<a href="">网站建设</a>
+                    <a href="">Logo设计</a>
+                    <a href="">装修设计</a>
+                    <a href="">建筑工程</a><a href=""> 标志设计</a>-->
+                </div>
+            </div>
+            <div class="ui-header-public fr" style="position: relative; top:-50px;" >
+                <span style="font-size:18px; position:absolute; margin-left:-55px; margin-top:15px;">或</span><div class="public-btn public">发布需求
+					<div class="publicbox" style="display:none">
+						<div class="title">发布你的需求，坐等服务商上门 </div>
+						<div class="conb">
+							<ul>
+							<li class="li1"><div class="tw">需求发布后</div><div class="bw">30分钟内收到服务商响应</div></li>
+							<li class="li2"><div class="tw">每个需求</div><div class="bw">都有专业顾问联系您</div></li>
+							<li class="li3"><div class="tw">98%以上的需求</div><div class="bw">得到了圆满解决 </div></li>
+							<span class="publicbtn" href="/welcome/fbxq" rel="nofollow">立即发布需求</span>
+							</ul>
+						</div>
+						<div class="bomb">
+						<span>上千</span><span class="sp1">人专业服务团队</span>专注企业服务<span>19</span>年<br />已为<span>15万</span>家客户提供超过<span>21</span>万项目服务<br /><span>一站式企业服务平台</span>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="clearfix"></div>
+    </div>
+    <!--end-->
+    <!--导航-->
+    <div class="ind-nav">
+        <div class="main_wrap clearfix">
+            <div class="firm-nav navPull">
+            
+<link rel="stylesheet" href="${res}/site/css/index.css" type="text/css">
+<script type="text/javascript" src="${res}/site/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//商品分类
+	$('.all-goods .item').hover(function(){
+		$(this).addClass('active').find('s').hide();
+		$(this).find('.product-wrap').show();
+	},function(){
+		$(this).removeClass('active').find('s').show();
+		$(this).find('.product-wrap').hide();
+	});
+});
+</script>
+ <div class="nav-wrap">
+	<div class="nav">
+		<div class="goods">
+			<h2 class="title" style=" height:40px; position:relative; top:-20px;">立帮服务指南</h2>
+			<div class="all-goods">
+				<div class="item btnone" >
+					<div class="product">
+						<h3><a href="#">工商/资质&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos01">
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">工商注册</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:20px;">内资公司注册</a>
+                            <a href="#" style="margin-right:20px;">外资公司注册</a>
+                            <a href="#" style="margin-right:20px;">郊县工商注册</a>
+                            <a href="#" style="margin-right:20px;">工商年检</a>
+                            <a href="#" style="margin-right:50px;">验资开户</a>
+                            <a href="#" style="margin-right:50px;">公司变更</a>
+                            <a href="#" style="margin-right:34px;">一般纳税人</a>
+                            <a href="#" style="margin-right:20px;">代理记账</a>
+                            <a href="#" style="margin-right:35px;">个体工商户</a>
+                            <a href="#" style="margin-right:50px;">公司注销</a>
+                            <a href="#" style="margin-right:48px;">验资审计</a>
+                            <a href="#">各类许可证</a>
+                            </div>
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">工商注册</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:32px;">总承包资质</a>
+                            <a href="#" style="margin-right:32px;">专业承包资质</a>
+                            <a href="#" class="cur" style="margin-right:32px;">一体化资质</a>
+                            <a href="#">劳务分包资质</a>
+                            <a href="#" style="margin-right:50px;">食品流通许可证</a>
+                            <a href="#" style="margin-right:50px;">道路运输许可证</a>
+                            <a href="#">房产开发资质</a>
+                            <a href="#" style="margin-right:32px;">资质增项升级</a>
+                            <a href="#" style="margin-right:32px;">安全生产许可</a>
+                            <a href="#" style="margin-right:32px;">靠挂与培训</a>
+                            <a href="#">入川备案</a>
+                            </div>
+							</div>        
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">网站/营销&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos02"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">网站建设</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">宣传型网站</a>
+                            <a href="#" class="cur" style="margin-right:32px;">功能型网站</a>
+                            <a href="#" class="cur" style="margin-right:32px;">电子商务网站</a>
+                            <a href="#" style="margin-right:32px;">网站</a><br />
+                            <a href="#" class="cur" style="margin-right:32px;">微官网</a>
+                            <a href="#">公司变更</a>
+                            </div>
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">网络营销</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:32px;">网络商机营销</a>
+                            <a href="#" class="cur" style="margin-right:32px;">SEM托管</a>
+                            <a href="#" class="cur" style="margin-right:32px;">电子商务网站</a>
+                            <a href="#">域名注册</a><br />
+                            <a href="#" style="margin-right:32px;">虚拟主机</a>
+                            <a href="#" style="margin-right:32px;">服务器</a>
+                            <a href="#">企业邮箱</a>
+                            </div>          
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">融资贷款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos03"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+			                <a href="#" style=" font-size:18px; position:relative; top:32px;">抵押贷款</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">全款房抵押贷款</a>
+                            <a href="#" class="cur" style="margin-right:32px;">按揭房再贷款</a>
+                            <a href="#" class="cur" style="margin-right:32px;">汽车抵押贷款</a>
+                            </div>     
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">自有产品</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">房产贷</a>
+                            <a href="#" style="margin-right:32px;">生意贷</a>
+                            <a href="#" class="cur" style="margin-right:32px;">精英贷</a>
+                            <a href="#" style="margin-right:32px;">抵押贷</a>
+                            <a href="#" style="margin-right:32px;">车贷</a>
+                            </div>       
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">商标专利&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos04"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">商标基础服务</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">国内商标注册</a>
+                            <a href="#" class="cur" style="margin-right:32px;">商标转让</a>
+                            <a href="#" style="margin-right:32px;">国际商标注册</a>
+                            <a href="#">国内专利申请</a>
+                            <a href="#" class="cur" style="margin-right:32px;">PCI申请</a>
+                            <a href="#" style="margin-right:32px;">版权登记</a>
+                            <a href="#" style="margin-right:32px;">著作权申请</a>
+                            <a href="#">创新基金</a>
+                            </div>	          
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">商标案例服务</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:32px;">双软认证</a>
+                            <a href="#" style="margin-right:32px;">高企认定</a>
+                            <a href="#" style="margin-right:32px;">重点新产品</a>
+                            <a href="#">商标无效</a><br />
+                            <a href="#" class="cur" style="margin-right:32px;">商标无效答辩</a>
+                            <a href="#" class="cur" style="margin-right:32px;">撤销三年不使用</a>
+                            <a href="#">撤销三年不使用答辩</a>
+                            </div>	               
+     
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">品牌咨询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos05"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">品牌设计</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:32px;">市场洞察</a>
+                            <a href="#" style="margin-right:32px;">品牌战略</a>
+                            <a href="#" style="margin-right:32px;">品牌形象</a>
+                            <a href="#" class="cur">品牌营销</a><br />
+                            <a href="#" style="margin-right:32px;">品牌管理</a>
+                            <a href="#" style="margin-right:32px;">基础服务</a>
+                            <a href="#" style="margin-right:32px;">单项策划</a>
+                            <a href="#" class="cur">整案咨询</a>
+                            </div>	     
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">视频制作</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" class="cur" style="margin-right:32px;">MV</a>
+                            <a href="#" class="cur" style="margin-right:32px;">明星代言</a>
+                            <a href="#" style="margin-right:32px;">企业宣传片</a>
+                            <a href="#" style="margin-right:32px;">微电影</a>
+                            <a href="#" class="cur">定制视频</a><br />
+                            <a href="#" style="margin-right:32px;">产品广告片</a>
+                            <a href="#" style="margin-right:32px;">公关活动</a>
+                            <a href="#" class="cur" style="margin-right:32px;">TVC广告片</a>
+                            <a href="#">3D动画效果</a>
+                            </div>	                
+          
+							</div>		
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">法律服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos06"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:448px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">法律咨询</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">合同纠纷</a>
+                            <a href="#" style="margin-right:32px;">交通事故</a>
+                            <a href="#" style="margin-right:32px;">公司法务</a>
+                            <a href="#" style="margin-right:32px;">债务纠纷</a>
+                            <a href="#">商业纠纷</a>
+                            <a href="#" style="margin-right:32px;">婚姻家庭</a>
+                            <a href="#" style="margin-right:32px;">涉外法律</a>
+                            <a href="#" style="margin-right:32px;">劳务争议</a>
+                            <a href="#" style="margin-right:32px;">房产纠纷</a>
+                            <a href="#">刑事辩护</a>
+                            </div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">项目申报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos07" style=" margin-bottom:28px;"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">项目申报</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">高新技术企业</a>
+                            <a href="#" class="cur" style="margin-right:32px;">重点新产品</a>
+                            <a href="#" style="margin-right:32px;">人才类项目</a>
+                            <a href="#">电商类项目</a>
+                            <a href="#" class="cur" style="margin-right:32px;">企业技术中心</a>
+                            <a href="#" style="margin-right:32px;">成果鉴定/转化</a>
+                            </div>	    
+							</div>	
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">众创/孵化&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos08"> 
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:448px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">众创孵化</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">众创空间</a>
+                            <a href="#" class="cur" style="margin-right:32px;">孵化器</a>
+                            <a href="#" style="margin-right:32px;">创业加速器</a>
+                            <a href="#" style="margin-right:32px;">创业扶持</a>
+                            <a href="#">创业贷款</a>
+                            <a href="#" style="margin-right:32px;">国家级扶持政策</a>
+                            <a href="#" style="margin-right:32px;">省级扶持政策</a>
+                            <a href="#" style="margin-right:32px;">市级扶持政策</a>
+                            </div>            
+							</div>
+					
+						</div>
+					</div>
+				</div>
+				
+				<!--<div class="item">
+					<div class="product">
+						<h3><a href="#" style=" font-family:'微软雅黑';font-size:15px; color:#DFDFDF;">品牌咨询&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos09"> 
+						<div class="cf" style="position:relative;top:20px;left:150px;">
+							<div class="fl wd252 pr20">
+								
+								<ul class="cf">
+									<li><a href="#" target="_blank" style="position:relative;right:12px;">市场洞察</a><hr /></li>
+									<li><a href="#" target="_blank" style="position:relative;right:12px;">品牌营销</a><hr /></li>
+									<li><a href="#" target="_blank" style="position:relative;right:12px;">  基础服务</a><hr /></li>
+									<li><a href="#" target="_blank" style="position:relative;right:12px;">单项策划</a><hr /></li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+				</div>-->
+				
+				<div class="item">
+					<div class="product">
+						<h3><a href="#">更多服务 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></h3>
+						<s></s>
+					</div>
+					<div class="product-wrap pos10">
+						<div class="cf">
+							<div class="fl wd252 pr20" style="width:440px;">
+							<a href="#" style=" font-size:18px; position:relative; top:32px;">许可证办理</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">食品流通许可证</a>
+                            <a href="#" style="margin-right:32px;">酒类销售许可证</a>
+                            <a href="#">道路运输许可证</a><br />
+                            <a href="#" style="margin-right:32px;">灵活就业许可证</a>
+                            <a href="#" style="margin-right:32px;">ICP/SP经营许可证</a>
+                            <a href="#">进出口经营许可证</a>
+                            <a href="#" style="margin-right:32px;">医疗器械许可证</a>
+                            </div>  
+                            <a href="#" style=" font-size:18px; position:relative; top:32px;">咨询服务</a>
+                            <div style="border-bottom:1px #999 solid; width:436px; margin-top:44px;"></div>
+                            <div style="width:100%; margin-top:6px; line-height:26px;">
+                            <a href="#" style="margin-right:32px;">企业化管理</a>
+                            <a href="#" style="margin-right:32px;">人力资源管理</a>
+                            <a href="#" style="margin-right:32px;">企业战略管理</a><br />
+                            <a href="#" style="margin-right:32px;">组织运营管理</a>
+                            </div>                    
+							</div>
+                            	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul style="position: relative;top:-40px;" >
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">立帮首页</a>
+			</li>
+			<li style="width:2px;position:relative;top:-5px;color:black;">
+			|
+			</li>
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">找服务</a>
+			</li>
+			<li style="width:2px;position:relative;top:-5px;color:black;">
+			|
+			</li>
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">找专家</a>
+			</li>
+			<li style="width:2px;position:relative;top:-5px;color:black;">
+			|
+			</li>
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">经典案例</a>
+			</li>
+			<li style="width:2px;position:relative;top:-5px;color:black;">
+			|
+			</li>
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">新闻</a>
+			</li>
+			<li style="width:2px;position:relative;top:-5px;color:black;">
+			|
+			</li>
+			<li>
+			<a href="" style="color:black;font-family:'微软雅黑'; font-size:15px; color:#000;position:relative;top:-5px;" onmouseover="this.style.color='red';this.style.textDecoration='none';this.style.backgroundColor='white'" onmouseout="this.style.color='black'">活动</a>
+			</li>
+		</ul>
+		
+		<!-- <ul class="nav-list cf">
+			<li><a href="#" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-30px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">立帮首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+			<li><a href="../zfw-lb/list.html" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-38px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">找服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+			<li><a class="on" href="../guwen-lb/guwen_list.html" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-38px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">找专家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+			<li><a href="../anli-lb/anli.html" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-30px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">经典案例&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+			<li><a href="../xinwen-lb/news.html" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-42px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">新闻&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+			<li><a href="../huodong-lb/huodong.html" style="font-family:'微软雅黑'; font-size:15px; color:#000; position:relative; right:-44px;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" >活动</a></li>
+		</ul> -->
+	</div>
+</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--end-->    	
+</div>
+<!--头部结束-->
+<script>
+var Jtfgs=document.getElementById('jtfgs');
+var Jtfgsdiv=document.getElementById('jtfgsdiv');
+ Jtfgs.onmouseover=function(){
+	Jtfgsdiv.style.display='block';
+	}
+Jtfgsdiv.onmouseover=function(){
+	Jtfgsdiv.style.display='block';
+}
+Jtfgsdiv.onmouseout=function(){
+	Jtfgsdiv.style.display='none';
+}
+
+var gy=document.getElementById('gy');
+var gy1=document.getElementById('gy1');
+ gy.onmouseover=function(){
+	gy1.style.display='block';
+	}
+gy.onmouseover=function(){
+	gy1.style.display='block';
+}
+gy.onmouseout=function(){
+	gy1.style.display='none';
+}
+gy1.onmouseover=function(){
+	gy1.style.display='block';
+}
+gy1.onmouseout=function(){
+	gy1.style.display='none';
+}
+
+var jt=document.getElementById('jt');
+var jt1=document.getElementById('jt1');
+ jt.onmouseover=function(){
+	jt1.style.display='block';
+	}
+jt.onmouseover=function(){
+	jt1.style.display='block';
+}
+jt.onmouseout=function(){
+	jt1.style.display='none';
+}
+jt1.onmouseover=function(){
+	jt1.style.display='block';
+}
+jt1.onmouseout=function(){
+	jt1.style.display='none';
+}
+
+var weixin=document.getElementById('weixin');
+var wenxin1=document.getElementById('wenxin1');
+ weixin.onmouseover=function(){
+	weixin1.style.display='block';
+	}
+weixin.onmouseover=function(){
+	weixin1.style.display='block';
+}
+weixin.onmouseout=function(){
+	weixin1.style.display='none';
+}
+</script>
+<!--内容开始-->
+<div id="container">
+	
+        <div class="main_wrap"><!--=======删、改=======-->
+            
+                <!--<div id="viewport-shadow" style="width:100%;">
+                    <div class="viewport-box" id="viewport">
+                        <div id="box">-->
+<link rel="stylesheet" href="${res}/site/images/css/style.css" />
+
+<script type='text/javascript' src='${res}/site/images/js/modernizr.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CSSettings = {"pluginPath":"${res}/site/images"};
+/* ]]> */
+</script>
+
+<script type='text/javascript' src='${res}/site/images/js/cute.slider.js'></script>
+<script type='text/javascript' src='${res}/site/images/js/cute.transitions.all.js'></script>
+<div class="c-860 c-demoslider" style="position:relative;left:100px;">
+
+	<div id="cuteslider_3_wrapper" class="cs-circleslight">
+		<div id="cuteslider_3" class="cute-slider" data-width="960" data-height="420" data-overpause="true">
+			<ul data-type="slides">
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr29,tr27,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13,tr45" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41">
+					<img  src="${res}/site/images/001/001.jpg" data-thumb="${res}/site/images/001/001a.png">
+					<a data-type="link" href="#" target="_blank"></a>
+					<!--<ul data-type="captions">
+						<li class="caption_slider2_layer1_sublayer1" data-effect="fade" data-delay="1000">特效网</li>
+						<li class="caption_slider2_layer1_sublayer2" data-effect="fade" data-delay="1200">令人惊叹的WordPress版本3D滑块</li>
+						<li class="caption_slider2_layer1_sublayer3" data-effect="fade" data-delay="2300"><a href="#" target="_blank" class="linked">html5 3d</a></li>
+						<li class="caption_slider2_layer1_sublayer4" data-effect="slide" data-delay="2000">特效网</li>
+						<li class="caption_slider2_layer1_sublayer5" data-effect="slide" data-delay="3000">&</li>
+						<li class="caption_slider2_layer1_sublayer6" data-effect="fade" data-delay="2600"><a href="#" target="_blank" class="linked">Slider</a></li>
+					</ul>-->
+				</li>
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41">
+					<img  src="${res}/site/images/bg/blank.png" data-src="${res}/site/images/001/002.jpg" data-thumb="${res}/site/images/001/002a.png">
+					<a data-type="link" href="#" target="_blank"></a>
+					<!--<ul data-type="captions">
+						<li class="caption_slider2_layer2_sublayer1" data-effect="fade" data-delay="500">前端开发网 html5 3d slider</li>
+						<li class="caption_slider2_layer2_sublayer2" data-effect="fade" data-delay="1000">特效网</li>
+						<li class="caption_slider2_layer2_sublayer3" data-effect="fade" data-delay="1500">这里有最近的资讯和前沿的开发技术！</li>
+					</ul>-->
+				</li>
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr41">
+					<img  src="${res}/site/images/bg/blank.png" data-src="${res}/site/images/001/003.jpg" data-thumb="${res}/site/images/001/003a.png">
+					<a data-type="link" href="#" target="_blank"></a>
+					<!--<div data-type="info" class="info1" data-align="right">
+						<div>
+							<h1 class="title">web前端开发的第一站</h1>
+							<p class="text"><a class="more-btn" href="#" target="_blank">前端开发网</a>特效网,html5,前端开发,html5游戏开发,html5网站,html5开发工具,html5浏览器,css3动画,webapp.<br class="clear"></p>
+						</div>
+					</div>-->
+				</li>
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41">
+					<img  src="${res}/site/images/bg/blank.png" data-src="${res}/site/images/001/004.jpg" data-thumb="${res}/site/images/001/004a.png">
+					<a data-type="link" href="#" target="_blank"></a>
+					<!--<ul data-type="captions">
+						<li class="caption_slider2_layer4_sublayer1" data-effect="fade" data-delay="1000">特效网（前端开发网）</li>
+						<li class="caption_slider2_layer4_sublayer2" data-effect="fade" data-delay="1500">是一个提供web前端开发资讯、工具插件、html5/flash游戏的站点</li>
+					</ul>-->
+				</li>
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41">
+					<img  src="${res}/site/images/bg/blank.png" data-src="${res}/site/images/001/005.jpg" data-thumb="${res}/site/images/001/005a.png">
+					<a data-type="video" href="http://player.youku.com/player.php/sid/XMzI0Mzg2OTA0/v.swf"></a>
+					<!--<ul data-type="captions">
+						<li class="caption_slider2_layer5_sublayer1" data-effect="fade" data-delay="500">本站的主要方向在于html5及flash游戏</li>
+						<li class="caption_slider2_layer5_sublayer2" data-effect="fade" data-delay="1500">单击播放此视频</li>
+					</ul>-->
+				</li>
+				<li data-delay="5" data-src="5" data-trans3d="tr6,tr17,tr22,tr23,tr26,tr27,tr29,tr32,tr34,tr35,tr53,tr54,tr62,tr63,tr4,tr13" data-trans2d="tr3,tr8,tr12,tr19,tr22,tr25,tr27,tr29,tr31,tr34,tr35,tr38,tr39,tr41">
+					<img src="${res}/site/images/bg/blank.png" data-src="${res}/site/images/001/006.jpg" data-thumb="${res}/site/images/001/006a.png">
+					<a data-type="link" href="#" target="_blank"></a>
+					<!--<ul data-type="captions">
+						<li class="caption_slider2_layer6_sublayer1" data-effect="fade" data-delay="500">2013</li>
+						<li class="caption_slider2_layer6_sublayer2" data-effect="fade" data-delay="1000">Year</li>
+						<li class="caption_slider2_layer6_sublayer3" data-effect="fade" data-delay="1500">HAPPY</li>
+						<li class="caption_slider2_layer6_sublayer4" data-effect="fade" data-delay="2000">祝大家</li>
+					</ul>-->
+				</li>
+			</ul>
+			<ul data-type="controls">
+				<li data-type="captions"></li>
+				<li data-type="link"></li>
+				<li data-type="video"></li>
+				<li data-type="slideinfo"></li>
+				<li data-type="circletimer"></li>
+				<li data-type="previous"></li>
+				<li data-type="next"> </li>
+				<li data-type="bartimer"></li>
+				<li data-type="slidecontrol" data-thumb="true" data-thumbalign="up"></li>
+			</ul>
+		</div>
+		<div class="cute-shadow"><img src="${res}/site/images/bg/shadow.png" alt="shadow"></div>
+	</div>
+
+	<script type="text/javascript">
+	var cuteslider3 = new Cute.Slider();
+	cuteslider3.setup("cuteslider_3" , "cuteslider_3_wrapper", "${res}/site/images/css/slider-style.css");
+	cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_START, function(event) { });
+	cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_END, function(event) { });
+	cuteslider3.api.addEventListener(Cute.SliderEvent.WATING, function(event) { });
+	cuteslider3.api.addEventListener(Cute.SliderEvent.CHANGE_NEXT_SLIDE, function(event) { });
+	cuteslider3.api.addEventListener(Cute.SliderEvent.WATING_FOR_NEXT, function(event) { });
+	</script>
+	
+</div>     
+                        <!--</div>
+                    </div>
+                    <div id="time-indicator"></div>
+                </div>--> 
+
+    </div>
+    <!--ui-banner end-->
+    <div class="recom-service main_wrap">
+        <!-- 发布需求 start-->
+        <div class="issue-main">
+            <div class="issue-need" style="background-color:#f2bc00; margin-top:27px;">
+                <div class="issue-title"><span style="color:#FFF; font-size:23px; font-family:'微软雅黑'; ">发布需求</span></div>
+                <form action="/welcome/fbxq3" method="post">
+                    <ul class="issue-form">
+                        <li><input type="text" name="info[xname]" placeholder="您的姓名"/></li>
+                        <li><input type="text" name="info[xtel]" placeholder="您的电话"/></li>
+                        <li>
+                            <select name="info[xtype]">
+                                <option>选择分类</option>
+                                <option value="工商代理">工商代理
+                                </option>
+                                <option value="知识产权">知识产权</option>
+                                <option value="网站建设">网站建设</option>
+                                <option value="金融服务">金融服务</option>
+                                <option value="品牌服务">品牌服务</option>
+                                <option value="法律服务">法律服务</option>
+                                <option value="众创孵化">众创孵化</option>
+                                <option value="建筑资质">建筑资质</option>
+                                <option value="电子商务">电子商务</option>
+                                <option value="财税服务">财税服务</option>
+                                <option value="其他服务">其他服务</option>
+                            </select>
+                        </li>
+                        <li><textarea name="desc" placeholder="需求描述"></textarea></li>
+                        <li class="issue-btn"><button>提交需求</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <!-- 发布需求 end-->
+        <div class="bd" style=" position:relative; top:25px; background-color:#f2bc00;">
+        	<ul class="recom-list">
+            	<li>
+                	<a href="/category/310">
+                    	<span class="pic"><img src="${res}/site/img/listimg1.jpg" /></span>
+                        <span class="inf"><strong class="tit">品牌设计</strong><span class="txt">logo设计，VI设计， 视频广告 </span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/category/374">
+                    	<span class="pic"><img src="${res}/site/img/listimg2.jpg" /></span>
+                        <span class="inf" style="margin-left:-10px;"><strong class="tit">贷款融资</strong><span class="txt">最快当天放款， 无抵押可贷500万</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/category/468">
+                    	<span class="pic"><img src="${res}/site/img/listimg3.jpg" /></span>
+                        <span class="inf" style="margin-left:-10px;"><strong class="tit">网站建设</strong><span class="txt">100人研发团队，个性化企业建站</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li>
+                	<a href="/category/154">
+                    	<span class="pic"><img src="${res}/site/img/listimg4.jpg" /></span>
+                        <span class="inf"><strong class="tit">管理培训</strong><span class="txt">中欧国际管理学院 MBA特聘讲师 </span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li class="fix">
+                	<a href="/category/394">
+                    	<span class="pic"><img src="${res}/site/img/listimg5.jpg" /></span>
+                        <span class="inf"><strong class="tit">财税代理</strong><span class="txt">平台会计代理案例 超10万起</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li class="fix">
+                	<a href="/category/398">
+                    	<span class="pic"><img src="${res}/site/img/listimg6.jpg" /></span>
+                        <span class="inf"><strong class="tit">商标专利</strong><span class="txt">申请快速上报， 成功率高达99%</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li class="fix">
+                	<a href="/category/314">
+                    	<span class="pic"><img src="${res}/site/img/listimg7.jpg" /></span>
+                        <span class="inf"><strong class="tit">工商/资质</strong><span class="txt">全国最大工商资质 办理平台</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+                <li class="fix">
+                	<a href="/category/354">
+                    	<span class="pic"><img src="${res}/site/img/listimg8.jpg" /></span>
+                        <span class="inf"><strong class="tit">电子商务</strong><span class="txt">超百人电子商务专家， 一对一服务</span><span class="lnk">立即申请<i>&gt;</i></span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div><br/><br/>
+    </div>
+    <!--dgg_recomend end-->
+  	
+   </div>
+    <div class="main_wrap">
+    <img src="${res}/site/img/guanggao2.jpg" style="width:1200px; height:138px;" />
+        <div class="cate-list">
+            <div class="cate-box">
+                <div class="hd-h3">
+                    <div class="tit-sub">
+                                                  <a  href="/category/313" target="_blank">工商/资质</a>
+                         <ins>|</ins>             <a  href="/category/394" target="_blank">财税服务</a>
+                         <ins>|</ins>             <a  href="/category/354" target="_blank">电子商务</a>
+                         <ins>|</ins>             <a  href="/category/341" target="_blank">公司转让</a>
+                         <ins>|</ins>             <a  href="/category/346" target="_blank">前置许可</a>
+                    </div>
+                    <a href="/counselorlist/" class="more">更多<i>&gt;</i></a>
+                </div>
+                <div class="bd">
+                    <div class="list">
+                        <dl>
+                        	<dt><a href="/category/313" class="bc1">工商/资质</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=314&b=1" class="cur" style="font-size:12px;">公司注册</a>
+                                <a href="/counselorlist/?f=326&b=1" style="YYYYY">个体工商户</a>
+                                <a href="/counselorlist/?f=324&b=1" class="cur" style="font-size:10px;">外资注册</a>
+                                <a href="/counselorlist/?f=322&b=1" style="font-size:10px;">工商变更</a>
+                                <a href="/counselorlist/?f=328&b=1" style="font-size:10px;">总承包资质</a>
+                                <a href="/counselorlist/?f=329&b=1" style="font-size:10px;">专业承包</a>
+                                <a href="/counselorlist/?f=339&b=1" style="font-size:10px;">设计资质</a>
+                                <a href="/counselorlist/?f=331&b=1" style="font-size:10px;">劳务分包</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/394" class="bc2">财税服务</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=394&b=1" class="cur" style="font-size:10px;">代理记账</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">一般纳税人</a>
+                                <a href="/counselorlist/?f=394&b=1" class="cur" style="font-size:10px;">综合避税</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">免抵退申报</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">税务代理</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">资产评估</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">出口退税</a>
+                                <a href="/counselorlist/?f=394&b=1" style="font-size:10px;">清算注销</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/354" class="bc3">电子商务</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=354&b=1" class="cur" style="font-size:10px;">广告宣传</a>
+                                <a href="/counselorlist/?f=357&b=1" style="font-size:10px;"> 咨询洽谈</a>
+                                <a href="/counselorlist/?f=358&b=1" class="cur" style="font-size:10px;">网上定购</a>
+                                <a href="/counselorlist/?f=362&b=1" style="font-size:10px;"> 网上支付</a>
+                                <a href="/counselorlist/?f=355&b=1" style="font-size:10px;"> 电子账户</a>
+                                <a href="/counselorlist/?f=366&b=1" style="font-size:10px;"> 服务传递</a>
+                                <a href="/counselorlist/?f=356&b=1" style="font-size:10px;"> 意见征询</a>
+                                <a href="/counselorlist/?f=364&b=1" style="font-size:10px;"> 交易管理</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="pic">
+																		<p><a href="http://zhuce.dggcn.com/category/293"><img src="${res}/site/img/145&113.jpg" /></a></p>
+																																																																																																																																																																																																																		<p><a href="/category/95"><img src="${res}/site/img/pp.gif" /></a></p>
+																																																																																																																																																                    </div>
+                </div>
+            </div>
+            <div class="cate-box">
+                <div class="hd-h3">
+                    <div class="tit-sub">
+                         <a  href="/category/398" target="_blank">商标/专利</a>
+                         <ins>|</ins>             <a  href="/category/508" target="_blank">项目申报</a>
+                         <ins>|</ins>             <a  href="/category/437" target="_blank">版权服务</a>
+                         <ins>|</ins>             <a  href="/counselorlist/?f=538&b=8" target="_blank">产品认证</a>
+                         <ins>|</ins>             <a  href="/category/351" target="_blank">体系认证</a>
+                    </div>
+                    <a href="/counselorlist/" class="more">更多<i>&gt;</i></a>
+                </div>
+                <div class="bd">
+                    <div class="list">
+                        <dl>
+                        	<dt><a href="/category/398" class="bc4">商标/专利</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=398&b=2" class="cur" style="font-size:10px;">商标注册</a>
+                                <a href="/counselorlist/?f=400&b=2" style="font-size:10px;">商标许可</a>
+                                <a href="/counselorlist/?f=401&b=2" class="cur" style="font-size:10px;">商标续展</a>
+                                <a href="/counselorlist/?f=403&b=2" style="font-size:10px;">商标变更</a>
+                                <a href="/counselorlist/?f=422&b=2" style="font-size:10px;">专利申请</a>
+								<a href="/counselorlist/?f=427&b=2" style="font-size:10px;">专利许可</a>
+                                <a href="/counselorlist/?f=423&b=2" style="font-size:10px;">发明专利</a>
+                                <a href="/counselorlist/?f=424&b=2" style="font-size:10px;">实用新型</a>
+                                <a href="/counselorlist/?f=425&b=2" style="font-size:10px;">外观设计</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/506" class="bc3">项目申报</a></dt>
+                            <dd>
+                                <a href="javascript:void(0);" class="cur" style="width:32%;font-size:10px;">高新技术企业</a>
+                                <a href="javascript:void(0);" style="font-size:10px;">重点新产品</a>
+                                <a href="javascript:void(0);" class="cur" style="font-size:10px; position:relative;left:22px;">人才类项目</a>
+                                <a href="javascript:void(0);" style="width:32%;font-size:10px;">电商类项目</a>
+                                <a href="javascript:void(0);" style="width:27%;font-size:10px;">企业技术中心</a>
+                                <a href="javascript:void(0);" style="width:32%;font-size:10px; position:relative;left:10px;">成果鉴定/转化</a>
+                            <!--
+                            	<a href="/counselorlist/?f=506&b=2" class="cur">重点新产品</a>
+                                <a href="/counselorlist/?f=508&b=2">高企认定</a>
+                                <a href="/counselorlist/?f=516&b=2" class="cur">双软认定</a>
+                                <a href="/counselorlist/?f=514&b=2" style="width:32%;">国家级企业技术中心</a>
+                                <a href="/counselorlist/?f=511&b=2">星火计划</a>
+                                <a href="/counselorlist/?f=509&b=2">创新基金</a>
+                                -->
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/437" class="bc3">其他服务</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=437&b=2" class="cur" style="font-size:10px;">版权登记</a>
+                                <a href="/counselorlist/?f=437&b=2" style="font-size:10px;">版权变更</a>
+                                <a href="/counselorlist/?f=437&b=2" class="cur" style="font-size:10px;">版权转让</a>
+                                <a href="/counselorlist/?f=438&b=2" style="font-size:10px;">软件测评</a>
+                                <a href="/counselorlist/?f=438&b=2" style="font-size:10px;">孵化器</a>
+                                <a href="/counselorlist/?f=438&b=2" style="font-size:10px;">企业用车</a>
+                                <a href="/counselorlist/?f=438&b=2" style="font-size:10px;">专家诊断</a>
+                                <a href="/counselorlist/?f=438&b=2" style="font-size:10px;">众创空间运营</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="pic">
+																		<p><a href="/category/398"><img src="${res}/site/img/zl.gif" /></a></p>
+																																																																																																																																																																																																																																																																																																																																																																																																						<p><a href="/category/530"><img src="${res}/site/img/400.jpg" /></a></p>
+																																																																																																																																																												                    </div>
+                </div>
+            </div>
+            <div class="cate-box">
+                <div class="hd-h3">
+                    <div class="tit-sub">
+                                                  <a  href="/category/310" target="_blank">品牌设计</a>
+                         <ins>|</ins>             <a  href="/category/468" target="_blank">网站建设</a>
+                         <ins>|</ins>             <a  href="/category/440" target="_blank">管理培训</a>
+                         <ins>|</ins>             <a  href="/category/471" target="_blank">域名空间</a>
+                         <ins>|</ins>             <a  href="/category/470" target="_blank">网络营销</a>
+                    </div>
+                    <a href="/counselorlist/" class="more">更多<i>&gt;</i></a>
+                </div>
+                <div class="bd">
+                    <div class="list">
+                        <dl>
+                        	<dt><a href="/category/310" class="bc3">品牌设计</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=545&b=5" class="cur" style="font-size:10px;">LOGO设计</a>
+                                <a href="/counselorlist/?f=546&b=5" style="font-size:10px;">企业形象</a>
+                                <a href="/counselorlist/?f=540&b=5" class="cur" style="font-size:10px;">名片设计</a>
+                                <a href="/counselorlist/?f=541&b=5" style="font-size:10px;">包装设计</a>
+                                <a href="/counselorlist/?f=545&b=5" style="font-size:10px;">商标设计</a>
+                                <a href="/counselorlist/?f=546&b=5" style="font-size:10px;">VI设计</a>
+                                <a href="/counselorlist/?f=545&b=5" style="font-size:10px;">画册设计</a>
+                                <a href="/counselorlist/?f=544&b=5" style="font-size:10px;">环境导示</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/468" class="bc5">网站建设</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=472&b=3" class="cur" style="font-size:10px;">企业网站</a>
+                                <a href="/counselorlist/?f=474&b=3" style="font-size:10px;">电商网站</a>
+                                <a href="/counselorlist/?f=489&b=3" class="cur" style="font-size:10px;">门户网站</a>
+                                <a href="/counselorlist/?f=487&b=3" style="font-size:10px;">营销型网站</a>
+                                <a href="/counselorlist/?f=475&b=3" style="font-size:10px;">手机网站制作</a>
+                                <a href="/counselorlist/?f=492&b=3" style="font-size:10px;">微官网</a>
+                                <a href="/counselorlist/?f=476&b=3" style="font-size:10px;">App开发</a>
+                                <a href="/counselorlist/?f=477&b=3" style="font-size:10px;">房产信息</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/440" class="bc3">管理培训</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=443&b=7" class="cur" style="width:26%;font-size:10px;">企业文化管理</a>
+                                <a href="/counselorlist/?f=444&b=7" style="width:26%;font-size:10px; margin-left:12px;">人力资源管理</a>
+                                <a href="/counselorlist/?f=445&b=7" class="cur" style="width:26%;font-size:10px; margin-left:12px;">企业战略管理</a>
+                                <a href="/counselorlist/?f=447&b=7" style="font-size:10px;">咨询式内训</a>
+                                <a href="/counselorlist/?f=448&b=7" style="width:26%;font-size:10px; margin-left:18px;">企业大学建设</a>
+                                <a href="/counselorlist/?f=449&b=7" style="font-size:10px; margin-left:14px;">高管研修班</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="pic">
+																		<p><a href="/category/472"><img src="${res}/site/img/wz.gif" /></a></p>
+																																																																																																																																																																																																																																																																																																																		
+						<p><a href="/category/440"><img src="${res}/site/img/px.jpg" /></a></p>
+						
+						
+                    </div>
+                </div>
+            </div>
+            <div class="cate-box">
+                <div class="hd-h3">
+                    <div class="tit-sub">
+                                                  <a  href="/category/374" target="_blank">贷款融资</a>
+												  <ins>|</ins> 
+												  <a href="/category/562" target="_blank">承兑汇票</a>
+                         <ins>|</ins>             <a  href="/category/497" target="_blank">法律服务</a>
+                         <ins>|</ins>             <a  href="/category/530" target="_blank">400电话</a>
+                         <ins>|</ins>             <a  href="/category/351" target="_blank">增值电信</a>
+                                     
+                    </div>
+                    <a href="/counselorlist/" class="more">更多<i>&gt;</i></a>
+                </div>
+                <div class="bd">
+                    <div class="list">
+                        <dl>
+                        	<dt><a href="/category/374" class="bc6">贷款融资</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=371&b=4" class="cur" style="font-size:10px;">信用贷款</a>
+                                <a href="/counselorlist/?f=374&b=4" style="font-size:10px;">信贷产品</a>
+                                <a href="/counselorlist/?f=373&b=4" class="cur" style="font-size:10px;">短期应急</a>
+                                <a href="/counselorlist/?f=372&b=4" style="font-size:10px;">企业贷款</a>
+                                <a href="/counselorlist/?f=369&b=4" style="font-size:10px;">抵押贷款</a>
+                                <a href="/counselorlist/?f=377&b=4" style="font-size:10px;">汽车抵押</a>
+                                <a href="/counselorlist/?f=375&b=4" style="font-size:10px;">房产抵押</a>
+                                <a href="/counselorlist/?f=370&b=4" style="font-size:10px;">按揭贷款</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/497" class="bc3">法律服务</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=497&b=6" class="cur" style="font-size:10px;">法律顾问</a>
+                                <a href="/counselorlist/?f=500&b=6" style="font-size:10px;">房产纠纷</a>
+                                <a href="/counselorlist/?f=497&b=6" style="font-size:10px; color:#F00;">合同纠纷</a>
+                                <a href="/counselorlist/?f=498&b=6" style="font-size:10px;">债券债务</a>
+                                <a href="/counselorlist/?f=499&b=6" style="font-size:10px;">知识产权</a>
+                                <a href="/counselorlist/?f=502&b=6" style="font-size:10px;">交通意外</a>
+                                <a href="/counselorlist/?f=497&b=6" style="font-size:10px;">企业公司</a>
+                                <a href="/counselorlist/?f=501&b=6" style="font-size:10px;">刑事辩护</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><a href="/category/351" class="bc3">增值电信</a></dt>
+                            <dd>
+                            	<a href="/counselorlist/?f=314&b=8" style="font-size:10px; color:#F00;">ICP许可证</a>
+                                <a href="/counselorlist/?f=314&b=8" style="font-size:10px;">SP许可证</a>
+                                <a href="/counselorlist/?f=314&b=8" class="cur" style="font-size:10px;">ISP许可证</a>
+                                <a href="/counselorlist/?f=314&b=8" style="font-size:10px;">IDC许可证</a>
+                                <a href="/counselorlist/?f=314&b=8" style="font-size:10px;">呼叫中心</a>
+                                <a href="/counselorlist/?f=314&b=8" style="font-size:10px;">BBS许可</a>
+                                <a href="/counselorlist/?f=530&b=8" style="font-size:10px;">400电话</a>
+                                <a href="/counselorlist/?f=537&b=8" style="font-size:10px;">信用评级</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="pic">
+																	<p><a href="/category/380"><img src="${res}/site/img/dk.jpg" /></a></p>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						<p><a href="/counselorlist/?b=6"><img src="${res}/site/img/fl.jpg" /></a></p>
+																																				                    </div>
+                </div>
+            </div>
+        <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--cate-list end-->
+   
+    <!--ad end-->
+    <div class="main_wrap">
+    	<div class="gw-class">
+        	<div class="hd">
+            	<h3 class="tit">商务顾问</h3>
+                <ul class="tab_gw">
+                	<li>网站<span></span></li>
+                    <li>营销<span></span></li>
+                    <li>工商<span></span></li>
+                    <li>会计<span></span></li>
+                    <li>融资<span></span></li>
+                    <li>品牌<span></span></li>
+                    <li>商标<span></span></li>
+                    <li>资质<span></span></li>
+                    <li>项目<span></span></li>
+                    <li>专利<span></span></li>
+                    <li>培训<span></span></li>
+                    <li>律师<span></span></li>
+                    <li>其他<span></span></li>
+                </ul>
+                <a href="/counselorlist/" class="more">更多<i>&gt;</i></a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="bd">
+                <ul class="tab_gw_box">
+                	<li>
+					<div class="leftad"><a href="/counselorlist/?b=3"><img src="${res}/site/img/libang.jpg" /></a></div>
+					<div class="rightbd">
+					                                                    <div class="info">
+                                <div class="gw-img" href="advisehome/423" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/nan.jpg">
+                                </div>
+                                <h3 class="tit"><span>谢咪 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span style="color:#ff9900">★★★★☆</span><span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>79</em></span><span class="cj">83成交</span></p>
+                                <p class="txt">在移动互联网时代，一定要做到让顾客来找你，而...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/423" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(423)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/125" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/nv.jpg">
+                                </div>
+                                <h3 class="tit"><span>谢咪 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span style="color:#ff9900">★★★★☆</span><span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">64成交</span></p>
+                                <p class="txt">在移动互联网时代，一定要做到让顾客来找你，而...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/125" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(125)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/91" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/nan2.jpg">
+                                </div>
+                                <h3 class="tit"><span>谢咪 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span style="color:#ff9900">★★★★☆</span><span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>99</em></span><span class="cj">79成交</span></p>
+                                <p class="txt">供职立帮已有3年时间，专注服务、尊重客户、高质量，...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/91" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(91)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/107" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/nv2.jpg">
+                                </div>
+                                <h3 class="tit"><span>谢咪 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span style="color:#ff9900">★★★★☆</span><span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>88</em></span><span class="cj">78成交</span></p>
+                                <p class="txt">供职立帮已有3年时间，专注服务、尊重客户、高质量，...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/107" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(107)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/131" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/nan3.jpg">
+                                </div>
+                                <h3 class="tit"><span>谢咪 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span style="color:#ff9900">★★★★☆</span><span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>97</em></span><span class="cj">86成交</span></p>
+                                <p class="txt">6年时间，自己一直扎根在互联网行业里面，也通...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/131" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(131)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=3"><img src="${res}/site/img/wsina.jpg" /></a></div>
+					<div class="rightbd">
+					                                                                                                                                                                                                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/830" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/3f4f2fffcd748411e10c96e01584d177.gif">
+                                </div>
+                                <h3 class="tit"><span>李娇</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">62成交</span></p>
+                                <p class="txt">事无巨细，大单小单都是单，都要做好。以此勉励...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/830" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(830)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/221" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/2daf08a03afb4015cea92be85ce73d99.jpg">
+                                </div>
+                                <h3 class="tit"><span>刘洋</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>84</em></span><span class="cj">70成交</span></p>
+                                <p class="txt">本人从事互联网营销行业多年，对于互联营销行业...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/221" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(221)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/92" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/5a1ec0132b77f5ee45f47ce2d56ba208.jpg">
+                                </div>
+                                <h3 class="tit"><span>江玉琢</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">66成交</span></p>
+                                <p class="txt">毕业于成都信息工程学院，从事互联网行业三年以...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/92" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(92)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/267" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/c8e10baea785faef65204a9f66100226.png">
+                                </div>
+                                <h3 class="tit"><span>王婷婷</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>85</em></span><span class="cj">83成交</span></p>
+                                <p class="txt">大学毕业后一直从事互联网行业，对各个行业的运...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/267" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(267)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/133" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/c111b8c23a387971283dc5cc767bd954.jpg">
+                                </div>
+                                <h3 class="tit"><span>方涛  </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>86</em></span><span class="cj">66成交</span></p>
+                                <p class="txt">供职立帮已有5年时间，在这5年的时间里让自...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/133" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(133)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=1"><img src="${res}/site/img/ddgs.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/295" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/7e1af97523960ff8fb353799deb27a0f.jpg">
+                                </div>
+                                <h3 class="tit"><span>金慧敏</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">90成交</span></p>
+                                <p class="txt">从事工商注册</p>
+                                <p class="lnk">
+                                    <a href="advisehome/295" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(295)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/50" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/229537ac65925cf61dfca6124eca7b30.jpg">
+                                </div>
+                                <h3 class="tit"><span>杨超</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>82</em></span><span class="cj">88成交</span></p>
+                                <p class="txt">姓名：杨超现供职于成都立帮投资集团有限公司...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/50" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(50)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/42" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/717420aed7f55371d0e8a19aefc79c59.jpg">
+                                </div>
+                                <h3 class="tit"><span>吴蓉</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>91</em></span><span class="cj">61成交</span></p>
+                                <p class="txt">姓名：吴蓉。现供职于成都立帮投资集团有限公...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/42" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(42)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/70" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/463ed5475bdb5e822001934daa30b8cd.jpg">
+                                </div>
+                                <h3 class="tit"><span>崔成文</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>83</em></span><span class="cj">68成交</span></p>
+                                <p class="txt">来立帮五年的工作经验，让我积累了丰富的工商...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/70" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(70)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/228" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/4a5830fd645db35791ceccac60e89c20.jpg">
+                                </div>
+                                <h3 class="tit"><span>唐宇诺</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>90</em></span><span class="cj">87成交</span></p>
+                                <p class="txt">唐宇诺，毕业于西华大学，具有丰富的公司注册、...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/228" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(228)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=8"><img src="${res}/site/img/ddsc.jpg" /></a></div>
+					<div class="rightbd">
+					                                                                                                                                                                                                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/83" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/5b8c946e1e04099b877934892f9b704d.jpg">
+                                </div>
+                                <h3 class="tit"><span>邓永廷</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>85</em></span><span class="cj">67成交</span></p>
+                                <p class="txt">集众人之力，成细节之美！全心全意为客户服务。</p>
+                                <p class="lnk">
+                                    <a href="advisehome/83" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(83)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/201" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/d7980fab1076ca5739520079b18db179.jpg">
+                                </div>
+                                <h3 class="tit"><span>黄梅</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">87成交</span></p>
+                                <p class="txt">我是立帮集团综合顾问黄梅，专业从事企业高端...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/201" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(201)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/256" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/8374d8b1ddc65832d1799519e5f58322.jpg">
+                                </div>
+                                <h3 class="tit"><span>宋雨森</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>80</em></span><span class="cj">74成交</span></p>
+                                <p class="txt">在税务工商方面自己从事多年，能帮助您解决所有...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/256" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(256)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/82" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/d9b54a24ea89adc14a52fa5efe7600f5.jpg">
+                                </div>
+                                <h3 class="tit"><span>贺星</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>96</em></span><span class="cj">87成交</span></p>
+                                <p class="txt">擅长400电话、会计代理、公司转让、ICP许...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/82" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(82)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                            					                                                    <div class="info">
+                                <div class="gw-img" href="advisehome/54" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/1cc980586802608f1268aff91da5a3ae.jpg">
+                                </div>
+                                <h3 class="tit"><span>何漓</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>83</em></span><span class="cj">63成交</span></p>
+                                <p class="txt">专注企业财务服务，从事过多起企业增资扩股、股...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/54" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(54)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                    					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=4"><img src="${res}/site/img/dggdk.jpg" /></a></div>
+					<div class="rightbd">
+					    						                            <div class="info">
+                                <div class="gw-img" href="advisehome/444" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/bb5b59d11d92b240318317a0371356bb.png">
+                                </div>
+                                <h3 class="tit"><span>邓诚霞</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">85成交</span></p>
+                                <p class="txt">成都立帮旗下顶泰投资：顶泰投资为你“贷”明...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/444" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(444)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+																		                            <div class="info">
+                                <div class="gw-img" href="advisehome/117" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/b931d54f0ce5636d895a5f887c81abe8.jpg">
+                                </div>
+                                <h3 class="tit"><span>郭亮</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">76成交</span></p>
+                                <p class="txt">专注于房产商铺等抵押贷款，按揭房二次贷款和无...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/117" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(117)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+																		                            <div class="info">
+                                <div class="gw-img" href="advisehome/209" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/d9110a01e8f137925e1356eb6405b61a.jpg">
+                                </div>
+                                <h3 class="tit"><span>段晓东</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>83</em></span><span class="cj">71成交</span></p>
+                                <p class="txt">本人从事贷款多年，专业办理房产抵押贷款、按揭...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/209" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(209)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+																		                            <div class="info">
+                                <div class="gw-img" href="advisehome/20" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/919e9deb8b76978bda4036a3bf3b0f44.jpg">
+                                </div>
+                                <h3 class="tit"><span>李雪</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>98</em></span><span class="cj">60成交</span></p>
+                                <p class="txt">专业办理全款房抵押贷款，按揭房二次抵押，个人...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/20" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(20)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+																		                            <div class="info">
+                                <div class="gw-img" href="advisehome/803" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/2573e478c47b822a2855c19f5d59e893.png">
+                                </div>
+                                <h3 class="tit"><span>王艳梅</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">88成交</span></p>
+                                <p class="txt"></p>
+                                <p class="lnk">
+                                    <a href="advisehome/803" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(803)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=5"><img src="${res}/site/img/dggpp.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/211" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/a7a0cee6f977f31a960a31532394252e.jpg">
+                                </div>
+                                <h3 class="tit"><span>庞芳</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>88</em></span><span class="cj">79成交</span></p>
+                                <p class="txt">品牌形象高级顾问，从事品牌策划行业3年，擅长...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/211" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(211)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/435" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/adfdd969931ff421b765f6f8a78d2734.jpg">
+                                </div>
+                                <h3 class="tit"><span>冯娜</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">64成交</span></p>
+                                <p class="txt">从事广告行业已有5年的时间，擅长客户现状分析...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/435" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(435)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/285" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/228b4cef97808b1476a1f80ffbf7ffc4.jpg">
+                                </div>
+                                <h3 class="tit"><span>杜雪莲</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>97</em></span><span class="cj">88成交</span></p>
+                                <p class="txt">市场会随着时间不断变化，而成功的品牌只会随着...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/285" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(285)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/750" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/2e1c2bfd2d3016067a25a1501b67c3cb.jpg">
+                                </div>
+                                <h3 class="tit"><span>李无疆</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">85成交</span></p>
+                                <p class="txt"></p>
+                                <p class="lnk">
+                                    <a href="advisehome/750" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(750)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/215" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/4e7f1f3b9982b811e40083325d10a0e5.jpg">
+                                </div>
+                                <h3 class="tit"><span>王艳</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>100</em></span><span class="cj">77成交</span></p>
+                                <p class="txt">主要负责品牌形象设计。如企业命名、logo设...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/215" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(215)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=2"><img src="${res}/site/img/dggsb.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/114" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/55e26a85fd41df4abfc29048e760b0e4.png">
+                                </div>
+                                <h3 class="tit"><span>曾海</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">78成交</span></p>
+                                <p class="txt">以质量求客户！以服务求合作！作为一名知识产权...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/114" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(114)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/270" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/aed94f680c392c236f9adb877383010d.jpg">
+                                </div>
+                                <h3 class="tit"><span>王成</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>90</em></span><span class="cj">68成交</span></p>
+                                <p class="txt">我叫王成，立帮知识产权顾问，今年22岁，来...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/270" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(270)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/35" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/bef69c7c2fe9418ae1e9ba479d8dc09b.jpg">
+                                </div>
+                                <h3 class="tit"><span>邓华秀</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>91</em></span><span class="cj">79成交</span></p>
+                                <p class="txt">本人就业以来一直从事知识产权行业，擅长专利和...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/35" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(35)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/79" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/189b113dff1fc7f85a8b26d22276675e.jpg">
+                                </div>
+                                <h3 class="tit"><span>魏建明</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>100</em></span><span class="cj">75成交</span></p>
+                                <p class="txt">立帮集团“精英俱乐部”会员，毕业于“江西师...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/79" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(79)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/119" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/8ab03f35b0e0fe7ffcf9f8fe98b4a033.jpg">
+                                </div>
+                                <h3 class="tit"><span>周剑锋</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>95</em></span><span class="cj">75成交</span></p>
+                                <p class="txt">本人从事知识产权行业3年多，擅长于对公司的知...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/119" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(119)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    					</div>
+                    </li>
+					<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=1"><img src="${res}/site/img/dggzz.jpg" /></a></div>
+					<div class="rightbd">
+                                                                                                                                                                                                                                                                                                    <div class="info">
+                                <div class="gw-img" href="advisehome/58" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/f7a1962fa77741f41a0c589efc226298.jpg">
+                                </div>
+                                <h3 class="tit"><span>许琴琴</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>97</em></span><span class="cj">62成交</span></p>
+                                <p class="txt">姓名：许琴琴现供职于成都立帮投资集团有限公...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/58" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(58)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/642" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/ffc3bd46576fc18b2db75a4f2bf460cf.jpg">
+                                </div>
+                                <h3 class="tit"><span>陈志双</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">87成交</span></p>
+                                <p class="txt"></p>
+                                <p class="lnk">
+                                    <a href="advisehome/642" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(642)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/61" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/b99f7d1f02c307c15bbfb2c0976cf2ae.jpg">
+                                </div>
+                                <h3 class="tit"><span>余丽</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>86</em></span><span class="cj">65成交</span></p>
+                                <p class="txt">您好，我主要可以为您办理，公司注册，建筑资质...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/61" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(61)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/579" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/1334104ff375ca36ed7fb497fff31cd8.jpg">
+                                </div>
+                                <h3 class="tit"><span>曹毅</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">67成交</span></p>
+                                <p class="txt"></p>
+                                <p class="lnk">
+                                    <a href="advisehome/579" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(579)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/71" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/fa7dc195e16330aed097d3f778bc35d1.jpg">
+                                </div>
+                                <h3 class="tit"><span>李强</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>87</em></span><span class="cj">84成交</span></p>
+                                <p class="txt">顾问简介2009年毕业于新疆师范大学，物理专...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/71" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(71)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                    					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=2"><img src="${res}/site/img/xmsb.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/272" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/db0b25c6b12020b5cf9380e60347dce3.jpg">
+                                </div>
+                                <h3 class="tit"><span>卢婷</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>86</em></span><span class="cj">81成交</span></p>
+                                <p class="txt">从事项目申报、专利、商标等代理业务，熟悉科技...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/272" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(272)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/712" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/61f0e1fbe0a3b23843a688722e964e47.jpg">
+                                </div>
+                                <h3 class="tit"><span>倪翔宇</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">84成交</span></p>
+                                <p class="txt">专业工作，交给专业的人</p>
+                                <p class="lnk">
+                                    <a href="advisehome/712" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(712)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/604" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/bf79287a9a76e6b1223194619bfbc1a6.jpg">
+                                </div>
+                                <h3 class="tit"><span>梁进进</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">81成交</span></p>
+                                <p class="txt">两年多的工作经历，擅长一系列科技领域的项目申...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/604" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(604)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/714" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/6c0a62ee83893d3bddaa86b775eff0d9.png">
+                                </div>
+                                <h3 class="tit"><span>张云川</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">71成交</span></p>
+                                <p class="txt">从事项目申报、专利、商标等代理业务，熟悉科技...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/714" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(714)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/550" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/7f8a89bd269552f9d7c1c31a5c462f54.jpg">
+                                </div>
+                                <h3 class="tit"><span>周鹏</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">81成交</span></p>
+                                <p class="txt">成都立帮旗下-项目咨询二部业务详细：1、科...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/550" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(550)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                    					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=2"><img src="${res}/site/img/dggzl.jpg" /></a></div>
+					<div class="rightbd">
+                                                                                                                                                                                                                                                                                                    <div class="info">
+                                <div class="gw-img" href="advisehome/97" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/5dc5b0866ed5d025ab0a219b2fc41b4a.png">
+                                </div>
+                                <h3 class="tit"><span>苏宗才</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>92</em></span><span class="cj">62成交</span></p>
+                                <p class="txt">姓名：苏宗才。现供职于成都立帮投资集团有限...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/97" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(97)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/102" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/6cc3e91bbac154b53820ae68cd584415.jpg">
+                                </div>
+                                <h3 class="tit"><span>汪丹</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>98</em></span><span class="cj">64成交</span></p>
+                                <p class="txt">从事知识产权行业已经4年多了，专注于企业商标...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/102" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(102)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/36" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/d7e641998acd1b1deb9a5a80d0e27996.jpg">
+                                </div>
+                                <h3 class="tit"><span>郑胜川</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>91</em></span><span class="cj">69成交</span></p>
+                                <p class="txt">隶属成都立帮集团，立足知识产权服务。主要服...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/36" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(36)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/118" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/bdc5add73e8560adcc1d18186876ec30.jpg">
+                                </div>
+                                <h3 class="tit"><span>任志</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>91</em></span><span class="cj">89成交</span></p>
+                                <p class="txt">以质量求客户！以服务求合作！从业5年知识产权...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/118" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(118)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/78" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/2a37111372cd74f014b31b7d8097bc68.jpg">
+                                </div>
+                                <h3 class="tit"><span>蒋春方</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>88</em></span><span class="cj">67成交</span></p>
+                                <p class="txt">蒋春方：成都理工大学信息系统专业，5年知识产...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/78" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(78)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        					</div>
+                    </li>
+					<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=8"><img src="${res}/site/img/dggzh.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/553" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/2152c45a07b6b25ef8d14ed023ee097e.jpg">
+                                </div>
+                                <h3 class="tit"><span>曹宝月</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">73成交</span></p>
+                                <p class="txt">进入立帮集团综合业务部以来，每一天都在努力...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/553" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(553)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/88" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/7d3d54062ba386f2302e2ff2eb632374.jpg">
+                                </div>
+                                <h3 class="tit"><span>梁铭</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:60%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>83</em></span><span class="cj">76成交</span></p>
+                                <p class="txt">我在成都立帮公司工作超过5年时间，在职期间...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/88" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(88)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/548" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/9de5e11db1c08052b4bbaa1b7dacfa09.jpg">
+                                </div>
+                                <h3 class="tit"><span>李茂婷</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">61成交</span></p>
+                                <p class="txt">从事企业服务，专注于解决客户的工商税务等相关...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/548" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(548)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/87" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/4c8a80adf29907d662b4e58568fcd5ae.jpg">
+                                </div>
+                                <h3 class="tit"><span>刘燕 </span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>91</em></span><span class="cj">60成交</span></p>
+                                <p class="txt">专业办理公司注册、公司买卖、ISO认证、境外...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/87" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(87)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/38" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/cdb1b041e7632ad7caf30b9d5ea0bccd.jpg">
+                                </div>
+                                <h3 class="tit"><span>宗曾静</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:100%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em>89</em></span><span class="cj">90成交</span></p>
+                                <p class="txt"></p>
+                                <p class="lnk">
+                                    <a href="advisehome/38" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(38)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                            					</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=7"><img src="${res}/site/img/pxdz.jpg" /></a></div>
+					<div class="rightbd">
+                                                                        <div class="info">
+                                <div class="gw-img" href="advisehome/500" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/abb3a2397d15564517afc33bb1666f12.jpg">
+                                </div>
+                                <h3 class="tit"><span>刘佳琪</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">77成交</span></p>
+                                <p class="txt">本人从事企业管理咨询、企业培训4年。服务燊记...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/500" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(500)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                            										</div>
+                    </li>
+                	<li style="display:none">
+					<div class="leftad"><a href="/counselorlist/?b=6"><img src="${res}/site/img/dggls.jpg" /></a></div>
+					<div class="rightbd">
+					                                                    <div class="info">
+                                <div class="gw-img" href="advisehome/554" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/40f779f267bdeb71962ab079aad1661f.png">
+                                </div>
+                                <h3 class="tit"><span>李进</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">62成交</span></p>
+                                <p class="txt">曾长期就职于行政机关和大型国企，从事法务和人...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/554" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(554)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/542" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/7658af5ef75199d8620cfa7c3c285e63.jpg">
+                                </div>
+                                <h3 class="tit"><span>宋明杰</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:80%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">79成交</span></p>
+                                <p class="txt">作为一名专业法律从业人员，本人注重的是诚信，...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/542" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(542)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                                                <div class="info">
+                                <div class="gw-img" href="advisehome/413" target="_blank">
+                                    <img width="160" height="160" src="${res}/site/img/47c674d0e7d4a6c60aede2d66f605a2b.png">
+                                </div>
+                                <h3 class="tit"><span>漆良</span>顾问</h3>
+                                <p style="text-align: center;">服务星级：<span class="xx"><span class="xxp" style="width:20%;"></span></span></p>
+                                <p><span class="goodp">好评数:<em></em></span><span class="cj">77成交</span></p>
+                                <p class="txt">漆良，性别男，擅长合同纠纷，债务纠纷，婚姻家...</p>
+                                <p class="lnk">
+                                    <a href="advisehome/413" class="fl a1">在线咨询</a>
+                                    <a href="javascript:;" onclick="tank(413)" class="fr a2">免费电话</a>
+                                </p>
+                            </div>
+                                                                					</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--guwen end-->
+</div>
+<!--内容结束-->
+
+
+<div  class="partner" style="text-align:center;">
+<p style=" font-family:'微软雅黑'; font-size:31px; color:#ffffff; position:relative; top:20px;"> 合 &nbsp;&nbsp;作&nbsp;&nbsp;伙&nbsp;&nbsp;伴</p>
+<img src="${res}/site/img/1.jpg" style=" margin-right:42px; margin-top:86px;">
+<img src="${res}/site/img/2.jpg" style=" margin-right:42px; margin-top:86px;" >
+<img src="${res}/site/img/3.jpg" style=" margin-right:42px; margin-top:86px;">
+<img src="${res}/site/img/4.jpg" style=" margin-right:42px; margin-top:86px;">
+<img src="${res}/site/img/5.jpg" style=" margin-top:86px;"><br/>
+<img src="${res}/site/img/6.jpg" style=" margin-right:42px; margin-top:20px;">
+<img src="${res}/site/img/7.jpg" style=" margin-right:42px; margin-top:20px;">
+<img src="${res}/site/img/8.jpg" style=" margin-right:42px; margin-top:20px;">
+<img src="${res}/site/img/9.jpg" style=" margin-right:42px; margin-top:20px;">
+<img src="${res}/site/img/10.jpg" style=" margin-top:20px;">
+</div>
+
+<!--底部开始-->
+<div id="ten_footer">
+    	<div class="footer_box1">
+        	<div class="box_width">
+            	<div class="left">
+                	<br/><img src="${res}/site/img/libang.png">
+                    <p>企业一站式企业服务平台</p>
+                </div>
+                <div>
+                <ul class="right">
+                	<li><a class="info" href=""><h3>关于我们</h3><p>About us</p></a></li>
+                    <li ><a class="info" href=""><h3  style="position:relative; right:20px;">服务产品</h3><p style="position:relative; right:20px;">Service</p></a></li>
+                    <li><a class="info" href=""><h3 style="position:relative; right:40px;">集团动态</h3><p style="position:relative; right:40px;">News</p></a></li>
+                    <li><a class="info" href=""><h3  style="position:relative; right:60px;">人才招聘</h3><p  style="position:relative; right:60px;">Recruitment</p></a></li>
+                    <li><a class="info" href=""><h3  style="position:relative; right:80px;">商务合作</h3><p style="position:relative; right:80px;">Consultant</p></a></li>
+                    <li><a class="info" onclick="doyoo.util.openChat();doyoo.util.accept();return false;"><h3  style="position:relative; right:100px;">在线咨询</h3><p style="position:relative; right:100px;">Consultation</p></a></li>
+                    <li><a class="info" onclick="doyoo.util.openChat();doyoo.util.accept();return false;"><h3  style="position:relative; right:120px;">联系我们</h3><p style="position:relative; right:120px;">Contact</p></a></li>
+                </ul>
+                </div>
+                <div>
+                <img src="${res}/site/img/ewm1.png" style="margin-left:67%; margin-top:-3%; ">
+                <img src="${res}/site/img/ewm2.png" style="margin-left:94%; margin-top:-13.2%; ">
+                <p style="margin-left:90%; margin-top:2%; font-family:'微软雅黑'; font-size:18px; color:#FFF">400-1891871</p>
+                <img src="${res}/site/img/phone.png" style="margin-left:83%; margin-top:-2.8%;" >
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+        <div class="footer_box2">
+        	<div class="box_width">
+            	<div class="title"><span class="sbtn"></span></div>
+                <ul class="type_list" style="width:1200px;"> 
+                	<li>
+                    	<div class="info">
+                        	<h4>知识产权</h4>
+                            <div class="abox">
+                            	<a href="">商标注册</a>
+								<a href="">商标查询 </a>
+								<a href="">专利申请 </a>
+								<a href="">项目申报</a>
+								<a href="">可行性报告</a>
+								<a href="">商业计划书</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>工商资质</h4>
+                            <div class="abox">
+                            	<a href="">工商注册</a>
+								<a href=""> 买卖旧公司 </a>
+								<a href="">公司转让 </a>
+								<a href="">建筑资质</a>
+								<a href="">会计代理</a>
+								<a href="">资质升级</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>贷款投资</h4>
+                            <div class="abox">
+                            	<a href="">信用贷款</a>
+								<a href="">信贷产品 </a>
+								<a href="">抵押贷款 </a>
+								<a href="">按揭贷款</a>
+								<a href="">短期急贷</a>
+								<a href="">企业贷款</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>律师事务所</h4>
+                            <div class="abox">                  
+                            	<a href="">企业公司</a>
+								<a href="">婚姻家庭 </a>
+								<a href="">合同纠纷 </a>
+								<a href="">交通事故</a>
+								<a href="">知识产权</a>
+								<a href="">工程建筑</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>会计事务所</h4>
+                            <div class="abox"> 
+                            	<a href="">财务审计</a>
+								<a href="">企业审计 </a>
+								<a href="">清算审计 </a>
+								<a href="">年检审计</a>
+								<a href="">专项审计</a>
+								<a href="">财税咨询</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                      <li style="position:relative;top:140px; right:200px;">
+                    	<div class="info">
+                        	<h4>工商资质</h4>
+                            <div class="abox">
+                            	<a href="">工商注册</a>
+								<a href=""> 买卖旧公司 </a>
+								<a href="">公司转让 </a>
+								<a href="">建筑资质</a>
+								<a href="">会计代理</a>
+								<a href="">资质升级</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>知识产权</h4>
+                            <div class="abox">
+                            	<a href="">商标注册</a>
+								<a href="">商标查询 </a>
+								<a href="">专利申请 </a>
+								<a href="">项目申报</a>
+								<a href="">可行性报告</a>
+								<a href="">商业计划书</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>创业商学院</h4>
+                            <div class="abox">            
+                            	<a href="">培训服务</a>
+								<a href="">咨询服务 </a>
+								<a href="">上市咨询 </a>
+								<a href="">政策咨询</a>
+								<a href="">更多业务</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="info">
+                        	<h4>顶筑装饰</h4>
+                            <div class="abox">          
+                            	<a href="">办公空间</a>
+								<a href="">餐馆酒店 </a>
+								<a href="">娱乐会所 </a>
+								<a href="">其它</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                    	<div class="info">
+                        	<h4>顶点综合</h4>
+                            <div class="abox">              
+                            	<a href="">体系认证</a>
+								<a href="">400电话 </a>
+								<a href="">许可证 </a>
+								<a href="">其他</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--<img src="${res}/site/img/ewm1.png" style="position:relative; right:-400px; top:-10px;">
+                <img src="${res}/site/img/ewm2.png" style="position:relative; right:-450px; top:-10px;">-->
+                <p style="font-size:22px; font-family:'微软雅黑'; color:#FFF; position:relative; right:-800px; top:-110px;">
+				<div style="color:#ffffff;padding-left:40px;">友情链接：
+                <a href="" style="color:#ffffff"> 八戒知识产权</a>
+                 <a href="" style="color:#ffffff"> 国际商标</a> 
+                 <a href="" style="color:#ffffff"> 亿智蘑菇</a> 
+                 <a href="" style="color:#ffffff"> 开办公司 </a>
+                 <a href="" style="color:#ffffff"> A5站长网 </a>
+                 <a href="" style="color:#ffffff"> 法律咨询</a>
+                 <a href="" style="color:#ffffff"> 搜了网</a> 
+                 <a href="" style="color:#ffffff"> 拉勾网</a> 
+                 <a href="" style="color:#ffffff"> 人才网</a>
+                 <a href="" style="color:#ffffff"> 品牌设计</a> 
+                 <a href="" style="color:#ffffff"> 买房网</a> 
+                 <a href="" style="color:#ffffff"> 天蓬网</a> 
+                 <a href="" style="color:#ffffff"> 需求市场</a> 
+                 <a href="" style="color:#ffffff"> 手机世界</a> 
+                 <a href="" style="color:#ffffff"> PHP100</a> 
+                 <a href="" style="color:#ffffff"> 黑光网</a> 
+                 <a href="" style="color:#ffffff"> 土木在线</a> 
+                 <a href="" style="color:#ffffff"> 室内设计</a>
+				</div>
+                </p>
+               <br/>
+                <div style="clear:both"></div>
+            </div>
+            <div class="bq">Copyright 1996-2015 cddgg.com 立帮科技集团 版权所有</div>
+        </div>
+    </div>	
+<!--底部结束-->
+
+<!--页面下角浮动框
+  <div href="" style="1920&60.jpg) repeat-x center center; height:60px; text-align:right;  color:#fff; font:bold 12px/28px Tahoma, Geneva, sans-serif; bottom:0px; position:fixed; width:100%;;z-index:999;">  
+  </div>-->
+<script src="${res}/site/js/dgg.min.js"></script>
+<script type="text/javascript" src="${res}/site/js/jq.Slide.js"></script>
+<script type="text/javascript" src="${res}/site/js/pt_main.js"></script>
+<script src="${res}/site/js/leyu0.js"></script>
+<script type="text/javascript" src="${res}/site/js/tabs.js"></script>
+<script type="text/javascript" src="${res}/site/js/dgg.js"></script>
+<script type="text/javascript" charset="utf-8" src="${res}/site/js/10055309.js"></script>
+
+
+	<!-- Piwik -->
+	<!--网页js采用外联-->
+<script type="text/javascript" src="${res}/site/js/tabson.js"></script>
+    <!--网页js采用外联end-->	
+<noscript><p><img src="//tongji.cddgg.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+	
+	
+	
+	
+
+
+
+<style type="text/css">
+    h2 {
+        margin: 100px 0 0 0;
+        color: #eb5a3d;
+        margin: auto;
+    }
+
+    .modal p:hover {
+        cursor: pointer;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        /*background-color:rgba(0,0,0,.5);*/
+        background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+        filter:Alpha(opacity=50);
+        background:#000000;/*实现IE背景透明*/
+    }
+
+    .modal {
+        display: block;
+        overflow: auto;
+        z-index: 1001;
+        position: absolute;
+        width:848px;
+        min-height:460px;
+        top:50%;
+        left:50%;
+        margin-left:-424px;
+        margin-top:-230px;
+    }
+
+    .modalLink{
+        width: 140px;
+        height: 80px;
+        position: relative;
+        z-index: 1000;
+        display: block;
+        position: fixed;
+        /*left: 100px;*/
+        top:20%;
+        /*bottom:100px;*/
+        /*right:200px;*/
+
+    }
+</style>
+
+
+<!--<div class="centerUp"> <a class="modalLink" href="javascript:void(0)"><img alt="" src="/static/sdan/images/qiqiu.png"></a></div>
+<div class="overlay">
+<div id="modal1" class="modal">
+    <p class="closeBtn"style="float: right"><img alt="" src="/static/sdan/images/lc.png"></p>
+    <h2><a href="" target="_blank"><img src="" alt=""/></a></h2>
+</div></div>-->
+
+<script>
+    $(".firm-nav").removeClass("navPull");
+    $('.centerUp').hide();
+    $('.centerUp .modalLink img').click(function(){
+        $('.centerUp').hide();
+        $('#modal1').stop().fadeIn(900);
+        $('.overlay').stop().slideDown(1000);
+    })
+    $('.closeBtn').click(function(){
+        $('#modal1').stop().fadeOut(900);
+        $('.overlay').stop().slideUp(1000);
+        $('.centerUp').show(1000);
+    })
+
+    var i=1;
+    $('.Ranking-list li').each(function(){
+        $(this).find('i').text(i);
+        i++;
+    });
+</script>
+
+<!-- cnzz -->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259895602'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259895602%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<!-- baidutongji -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "js/hm.js?b225e47fc07d4935d031940b83196d4b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<script> 
+var curIndex=0; 
+//时间间隔 单位毫秒 
+var timeInterval=2000; 
+var arr=new Array(); 
+arr[0]="two_banner.jpg"; 
+arr[1]="two_banner1.jpg";
+setInterval(changeImg,timeInterval); 
+function changeImg() 
+{ 
+var obj=document.getElementById("showpic"); 
+if (curIndex==arr.length-1) 
+{ 
+curIndex=0; 
+} 
+else 
+{ 
+curIndex+=1; 
+} 
+obj.src="/static/v2/ptimg/"+arr[curIndex]; 
+} 
+</script> 
+
+
+
+
+
+</body>
+</html>

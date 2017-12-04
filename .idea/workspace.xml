@@ -1,0 +1,1942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="4fe4f3c9-4a0b-4cda-a423-68675d9796e2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/cms.sql" afterPath="$PROJECT_DIR$/sql/cms.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/AController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/AController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/ContentListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/ContentListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/MController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/base/MController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Ad.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Ad.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Admin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/AdminRole.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/AdminRole.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Area.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Area.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Category.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Commont.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Commont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Config.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/ConfigAttr.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/ConfigAttr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Content.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Content.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Form.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Form.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Link.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Link.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Member.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Member.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/MemberGroup.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/MemberGroup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Menu.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/ModelFiled.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/ModelFiled.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Permission.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Permission.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/RolePermission.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/RolePermission.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/SearchWords.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/SearchWords.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Tag.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Tag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/TagContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/TagContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/TaskContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/TaskContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Topic.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Topic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Website.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/Website.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/_MappingKit.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/model/_MappingKit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/AdService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/AdService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/AdminService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ConfigService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ConfigService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ContentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ContentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/FormService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/FormService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/LuceneService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/LuceneService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/MenuService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/MenuService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ModelFiledService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ModelFiledService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ModelService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/ModelService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/PermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/PermissionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/RoleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/SiteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/SiteService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/StaticHtmlService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/StaticHtmlService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/SystemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/SystemService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TagService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TagService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TaskService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TaskService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TopicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/TopicService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/linkService.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/service/linkService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/ModelController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/ModelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/SystemController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/SystemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/UploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/UploadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlHtmlUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlHtmlUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRender.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRenderFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRenderFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebErrorHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebErrorHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebRender.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebRender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/CacheInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/CacheInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/FakeStaticHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/FakeStaticHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/InitHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/InitHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/RenderInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/RenderInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/RenderType.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/ext/RenderType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/AverageImageScale.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/AverageImageScale.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageScale.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageScale.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageScaleImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageScaleImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/ImageUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/image/MagickImageScale.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/image/MagickImageScale.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/install/Install.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/install/Install.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/install/InstallController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/install/InstallController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/install/InstallInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/install/InstallInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/ErrorInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/ErrorInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/SystemInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/SystemInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/UCenterInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/interceptor/UCenterInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/lucene/LuceneDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/lucene/LuceneDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/lucene/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/lucene/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/Oauth.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/Oauth.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthBaidu.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthBaidu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthQQ.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthQQ.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthSina.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/oauth/OauthSina.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/quartz/JFinalJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/quartz/JFinalJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/quartz/QuartzPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/quartz/QuartzPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AbstractAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AbstractAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AuthenticatedAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AuthenticatedAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/AuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ClearShiro.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ClearShiro.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/CompositeAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/CompositeAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/EhCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/EhCacheManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/GuestAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/GuestAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/PasswordHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/PasswordHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/PermissionAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/PermissionAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/RemberAuthHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/RemberAuthHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/RoleAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/RoleAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroKit.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroKit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroMethod.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/UserAuthzHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/UserAuthzHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/thread/HtmlThread.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/thread/HtmlThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/CmsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/CmsUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/DateUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/DateUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/DbTableUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/DbTableUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/EmailUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/EmailUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/EncryptUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/EncryptUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/HtmlUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/HtmlUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/PinyinUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/PinyinUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/PropUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/PropUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/QiniuUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/QiniuUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/SQLUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/SQLUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/ServletUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/ServletUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/SmsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/SmsUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/util/UploadUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/util/UploadUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/BTGSessionVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/BTGSessionVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/ChannelVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/ChannelVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/HtmlObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/HtmlObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/ModelFiledVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/ModelFiledVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/PageActionVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/PageActionVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/PaginateVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/common/vo/PaginateVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/AppConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/AppConst.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/AppConst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/GeneratorTable.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/GeneratorTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/LoadDbAppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/LoadDbAppConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/HomeRoutes.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/HomeRoutes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/SystemRoutes.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/SystemRoutes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/UCenterRoutes.java" afterPath="$PROJECT_DIR$/src/main/java/com/icms/config/routes/UCenterRoutes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/401.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/401.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/404.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/500.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/error.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/error.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/status.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/common/status.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/front/default/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/front/default/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/install/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/install/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/ad-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/ad-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/ad-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/ad-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-role-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-role-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-role.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/admin-role.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/category-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/category-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/category-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/category-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-main.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-recovery.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/content-recovery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-table-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/form-table-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/link-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/link-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/link-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/link-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/menu-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/menu-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/menu-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/menu-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/model-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/model-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/model-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/model-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/modelfiled-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/modelfiled-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/modelfiled-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/modelfiled-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/permission-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/permission-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/permission-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/permission-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/site-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/site-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/site-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/site-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/system-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/system-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/tag-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/tag-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/topic-input.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/topic-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/topic-list.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/topic-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/welcome.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/system/welcome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/test.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/ucenter/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/ucenter/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/ucenter/register.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/ucenter/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/1/news.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/1/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/1/service.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/1/service.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/1/zhuanjia.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/1/zhuanjia.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/install/css/install.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/install/css/install.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/install/images/formvalidator.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/install/images/formvalidator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/install/images/formvalidatorregex.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/install/images/formvalidatorregex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/install/images/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/install/images/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/DD_belatedPNG_0.0.8a-min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/DD_belatedPNG_0.0.8a-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/My97DatePicker/WdatePicker.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/My97DatePicker/WdatePicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/My97DatePicker/calendar.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/My97DatePicker/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE678.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE678.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE678_uncompressed.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE678_uncompressed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE9.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE9.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE9_uncompressed.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/PIE-2.0beta1/PIE_IE9_uncompressed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/bootstrap-Switch/bootstrapSwitch.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/bootstrap-Switch/bootstrapSwitch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/bootstrap-Switch/bootstrapSwitch.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/bootstrap-Switch/bootstrapSwitch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/dropzone/dropzone.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/dropzone/dropzone.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/dropzone/dropzone.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/dropzone/dropzone.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/handlebars.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/handlebars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/html5.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/html5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/html5uploader.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/html5uploader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/jquery.html5uploader.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/jquery.html5uploader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/jquery.html5uploader.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/html5upload/jquery.html5uploader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/icheck/icheck.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/icheck/icheck.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/icheck/jquery.icheck.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/icheck/jquery.icheck.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/1.9.1/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/1.9.1/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/1.9.1/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/1.9.1/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/jquery.form.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/jquery/jquery.form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/1.9.3/demo.html" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/1.9.3/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/1.9.3/layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/1.9.3/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/2.1/demo.html" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/2.1/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/2.1/layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/layer/2.1/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/lazyload/lazyload.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/lazyload/lazyload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/lazyload/lazyload.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/lazyload/lazyload.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/respond.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/stickUp/stickUp.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/stickUp/stickUp.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/swfobject.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/swfobject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/unslider/unslider.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/unslider/unslider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.min.map" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.Core.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.min.map" afterPath="$PROJECT_DIR$/src/main/webapp/r/lib/zeroclipboard-2.2.0/ZeroClipboard.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/add-main.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/add-main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/layer.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/layer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/newfooter.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/newfooter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/pt-main.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/pt-main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/right.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/right.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/system.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/system.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/talk99.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/talk99.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/upDate.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/upDate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/css/zzsc.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/css/zzsc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/10055309.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/10055309.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/box-slider-all.jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/box-slider-all.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/dgg.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/dgg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/dgg.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/dgg.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/imgshow.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/imgshow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jq.Slide.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jq.Slide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.11.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.11.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.7.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.7.2.min1.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.7.2.min1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-1.8.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-ui-1.11.0.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery-ui-1.11.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery.lazyload.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery.lazyload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/leyu0.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/leyu0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/modernizr.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/modernizr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/pt_main.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/pt_main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/qq.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/qq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/right0_1.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/right0_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/s.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/s.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/scrollto.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/scrollto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/superslide.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/superslide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/tabs.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/tabson.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/tabson.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/talk99.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/talk99.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/site/js/zzsc.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/site/js/zzsc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/system/js/content.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/system/js/content.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/system/js/login.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/system/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.flat.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.flat.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/amazeui.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.ie8polyfill.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.ie8polyfill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.ie8polyfill.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.ie8polyfill.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.widgets.helper.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.widgets.helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.widgets.helper.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/amazeui.widgets.helper.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/handlebars.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/handlebars.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/scroll.js" afterPath="$PROJECT_DIR$/src/main/webapp/r/zw-theme/js/scroll.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="icms" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ChannelListTag.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/ChannelListTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#4909#4910#0" expanded="false" />
+                <element signature="e#4954#4955#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SliderTag.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/SliderTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shiro.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/shiro.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.75">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cms.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sql/cms.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetryLimitHashedCredentialsMatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/t/front/default/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="74" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getCategoryList</find>
+      <find>form</find>
+      <find>IndexController</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Administrator\Desktop\新建文件夹\src\main\java\com\icms\cms\model</dir>
+    </dirStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/base/MController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/ModelController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/SystemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRenderFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebRender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/common/vo/ChannelVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/t/front/default/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icms/common/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
+        <option value="$PROJECT_DIR$/readme" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Program Files\LocalWarehouse" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\java\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
+    <option name="y" value="29" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Compiler issuesJava</id>
+          </State>
+          <State>
+            <id>Finalization issuesJava</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>Gradle</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>JSP Inspections</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaBeans issuesJava</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>OtherGroovy</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Probable bugsGradle</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>Security issuesJava</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+          <State>
+            <id>Verbose or redundant code constructsJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../finalProject/uuwifiaaa" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Project/icms/src/main/java/com/icms/cms/web/index/IndexController.java" />
+    <property name="js-jscs-nodeInterpreter" value="D:\Node\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\testProject\icms\sql" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="icms" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="icms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_icms" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50770" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="icms:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\wei\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Project\testProject\icms" />
+          <option name="myCopyRoot" value="E:\Project\testProject\icms" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Project\testProject\icms\.idea" />
+          <option name="myCopyRoot" value="E:\Project\testProject\icms\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Project\testProject\icms" />
+          <option name="myCopyRoot" value="E:\Project\testProject\icms" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fe4f3c9-4a0b-4cda-a423-68675d9796e2" name="Default" comment="" />
+      <created>1496210943057</created>
+      <option name="number" value="Default" />
+      <updated>1496210943057</updated>
+      <workItem from="1496210945569" duration="1320000" />
+      <workItem from="1496212323563" duration="5529000" />
+      <workItem from="1496219030906" duration="3488000" />
+      <workItem from="1496224337465" duration="2693000" />
+      <workItem from="1496374614641" duration="2139000" />
+      <workItem from="1496641821193" duration="3255000" />
+      <workItem from="1496713240299" duration="7845000" />
+      <workItem from="1496974016093" duration="18316000" />
+      <workItem from="1497056345586" duration="19878000" />
+      <workItem from="1497229332755" duration="14003000" />
+      <workItem from="1497256971732" duration="2002000" />
+      <workItem from="1497316304073" duration="5082000" />
+      <workItem from="1497432007666" duration="141000" />
+      <workItem from="1497492096531" duration="155000" />
+      <workItem from="1497493205852" duration="613000" />
+      <workItem from="1497926982776" duration="24000" />
+      <workItem from="1498116852121" duration="333000" />
+      <workItem from="1498120146003" duration="15000" />
+      <workItem from="1506494383369" duration="3039000" />
+      <workItem from="1512382718960" duration="369000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="90239000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="13" y="29" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33183858" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5902174" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3979933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2962138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/AdController.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/CategoryController.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/com/jfinal/jfinal/2.2/jfinal-2.2-sources.jar!/com/jfinal/plugin/activerecord/Model.java</url>
+          <line>497</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/com/jfinal/jfinal/2.2/jfinal-2.2-sources.jar!/com/jfinal/plugin/activerecord/Model.java</url>
+          <line>521</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/Website.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/base/BaseWebsite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#845#846#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1123#1124#0" expanded="false" />
+            <element signature="e#1149#1150#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1214#1215#0" expanded="false" />
+            <element signature="e#1267#1268#0" expanded="false" />
+            <element signature="e#1297#1298#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="false" />
+            <element signature="e#1427#1428#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1510#1511#0" expanded="false" />
+            <element signature="e#1542#1543#0" expanded="false" />
+            <element signature="e#1598#1599#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1674#1675#0" expanded="false" />
+            <element signature="e#1704#1705#0" expanded="false" />
+            <element signature="e#1761#1762#0" expanded="false" />
+            <element signature="e#1796#1797#0" expanded="false" />
+            <element signature="e#1839#1840#0" expanded="false" />
+            <element signature="e#1870#1871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/system/js/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/AdController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/hw_bg3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/hw_bg2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/hw_bg1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/hw_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/SystemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.821429">
+          <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/ext/CacheInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/ModelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.714286">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/shiro/ShiroInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/ContentTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5625">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/service/ContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="198" column="57" selection-start-line="198" selection-start-column="57" selection-end-line="198" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/service/ModelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/base/BaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45378152">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/base/BaseCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33272728">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3927273">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/admin/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/config/routes/UCenterRoutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19636364">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/config/routes/HomeRoutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19636364">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/java/jdk1.7/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33289987">
+          <caret line="221" column="31" selection-start-line="221" selection-start-column="31" selection-end-line="221" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/function/SplitString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3515625">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/ShiroTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28125">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/config/routes/SystemRoutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/HENGWANG.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/HENGWANG.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/r/zw-theme/img/hw-word.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/vo/ChannelVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6708075">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/ContentListTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6829746">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15851273">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/BeetlRenderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/WebRender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#753#754#0" expanded="false" />
+            <element signature="e#781#782#0" expanded="false" />
+            <element signature="e#5057#5058#0" expanded="false" />
+            <element signature="e#5081#5082#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/Website.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/model/base/BaseWebsite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#509#510#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#845#846#0" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1123#1124#0" expanded="false" />
+            <element signature="e#1149#1150#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1214#1215#0" expanded="false" />
+            <element signature="e#1267#1268#0" expanded="false" />
+            <element signature="e#1297#1298#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="false" />
+            <element signature="e#1427#1428#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1510#1511#0" expanded="false" />
+            <element signature="e#1542#1543#0" expanded="false" />
+            <element signature="e#1598#1599#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1674#1675#0" expanded="false" />
+            <element signature="e#1704#1705#0" expanded="false" />
+            <element signature="e#1761#1762#0" expanded="false" />
+            <element signature="e#1796#1797#0" expanded="false" />
+            <element signature="e#1839#1840#0" expanded="false" />
+            <element signature="e#1870#1871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/web/index/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/t/front/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="74" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/ChannelListTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/cms/service/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4909#4910#0" expanded="false" />
+            <element signature="e#4954#4955#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/beetl/tag/SliderTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icms/common/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/shiro.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.75">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/cms.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>icms:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>springMVC</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>icms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.eclipse.jetty:jetty-continuation:8.1.8.v20121106</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

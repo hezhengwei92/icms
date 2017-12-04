@@ -1,0 +1,455 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${res}/lib/html5.js"></script>
+    <script type="text/javascript" src="${res}/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${res}/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${res}/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${res}/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="${res}/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="${res}/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css" href="${res}/system/h-ui/skin/default/skin.css" id="skin"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${res}/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>基本设置</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span
+        class="c-gray en">&gt;</span> 基本设置 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+                                              href="javascript:location.replace(location.href);" title="刷新"><i
+        class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <form action="${managePath}/save" class="form form-horizontal" id="form-config-add">
+        <input type="hidden" name="config.Id" value="${config.id!}">
+        <input type="hidden" name="config.oauth_sina_redirect" value="${config.oauth_sina_redirect!}">
+        <input type="hidden" name="config.oauth_qq_redirect" value="${config.oauth_qq_redirect!}">
+        <div id="tab-system" class="HuiTab">
+            <div class="tabBar cl"><span>基本设置</span><span>安全设置</span><span>邮件设置</span><span>其他设置</span></div>
+            <div class="tabCon">
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>后台路径：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" id="website-title" placeholder="默认为:/system" value="${config.admin_path!}"
+                               name="config.admin_path" class="input-text   radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">允许会员注册：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.allow_member_reg){
+                        <input type="radio" checked="checked" name="config.allow_member_reg" value="1" id="reg2">
+                        <label for="reg2">开启</label>
+                        <input type="radio" name="config.allow_member_reg" value="0" id="r22">
+                        <label for="r22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.allow_member_reg" value="1" id="re2">
+                        <label for="re2">开启</label>
+                        <input type="radio" checked="checked" name="config.allow_member_reg" value="0" id="re22">
+                        <label for="re22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">会员邮件验证：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.member_email_check){
+                        <input type="radio" checked="checked" name="config.member_email_check" value="1" id="mr2">
+                        <label for="mr2">开启</label>
+                        <input type="radio" name="config.member_email_check" value="0" id="mmr22">
+                        <label for="mmr22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.member_email_check" value="1" id="mmmr2">
+                        <label for="mmmr2">开启</label>
+                        <input type="radio" checked="checked" name="config.member_email_check" value="0" id="mmmmr22">
+                        <label for="mmmmmr22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">Http协议：</label>
+                    <div class="formControls col-xs-7 col-sm-8">
+					<span class="select-box  radius"> 
+					<select name="config.http_protocol" class="select  radius">
+                        @if(config.http_protocol=='http'){
+                        <option value="http" selected="selected">http</option>
+                        <option value="https">https</option>
+                        @}else{
+                        <option value="http">http</option>
+                        <option value="https" selected="selected">https</option>
+                        @}
+                    </select>
+					</span>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">伪静态：</label>
+                    <div class="formControls col-xs-7 col-sm-8">
+					<span class="select-box  radius"> 
+					<select name="config.dynamic_suffix" class="select  radius">
+                        @if(config.dynamic_suffix=='.shtml'){
+                        <option value=".shtml" selected="selected">.shtml</option>
+                        <option value=".htm">htm</option>
+                        @}else{
+                        <option value=".shtml">.shtml</option>
+                        <option value=".htm" selected="selected">.htm</option>
+                        @}
+                    </select>
+					</span>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">开发模式：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.is_dev){
+                        <input type="radio" name="config.is_dev" checked="checked" value="1" id="r1">
+                        <label for="r1">开启</label>
+                        <input type="radio" name="config.is_dev" value="0" id="r12">
+                        <label for="r12">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.is_dev" value="1" id="r1">
+                        <label for="r1">开启</label>
+                        <input type="radio" name="config.is_dev" checked="checked" value="0" id="r12">
+                        <label for="r12">关闭</label>
+                        @}
+                    </div>
+
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">演示模式：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.is_demo){
+                        <input type="radio" name="config.is_demo" checked="checked" value="1" id="r2">
+                        <label for="r2">开启</label>
+                        <input type="radio" name="config.is_demo" value="0" id="r22">
+                        <label for="r22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.is_demo" value="1" id="r2">
+                        <label for="r2">开启</label>
+                        <input type="radio" name="config.is_demo" checked="checked" value="0" id="r22">
+                        <label for="r22">关闭</label>
+                        @}
+                    </div>
+
+                </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>底部版权信息：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" id="website-copyright" placeholder="&copy;icms" value="${config.copyright!}"
+                               name="config.copyright" class="input-text">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">备案号：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" id="website-icp" placeholder="京ICP备00000000号" value="${config.beian!}"
+                               name="config.beian" class="input-text">
+                    </div>
+                </div>
+
+            </div>
+            <div class="tabCon">
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">七牛上传：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.qiniu_on){
+                        <input type="radio" name="config.qiniu_on" checked="checked" value="1" id="r2">
+                        <label for="r2">开启</label>
+                        <input type="radio" name="config.qiniu_on" value="0" id="r22">
+                        <label for="r22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.qiniu_on" value="1" id="r2">
+                        <label for="r2">开启</label>
+                        <input type="radio" name="config.qiniu_on" checked="checked" value="0" id="r22">
+                        <label for="r22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">七牛地址：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" name="config.qiniu_url" value="${config.qiniu_url!}"
+                               class="input-text  radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">bucketName：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text   radius" name="config.qiniu_bucketName"
+                               value="${config.qiniu_bucketName!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">accessKey：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text  radius" name="config.qiniu_accessKey"
+                               value="${config.qiniu_accessKey!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">secretKey：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text  radius" name="config.qiniu_secretKey"
+                               value="${config.qiniu_secretKey!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>允许文件上传最大值：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" placeholder="如：1024*1024*10 = 10Mb"
+                               value="${config.upload_max!" 10"}" name="config.upload_max" >
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>允许上传文件类型：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" id="website-Keywords" placeholder="如：.txt|.doc 用  “|” 隔开"
+                               value="${config.upload_allowType!}" name="config.upload_allowType"
+                               class="input-text   radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">允许访问后台的IP列表：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <textarea class="textarea" name="config.refuse_ip">${config.refuse_ip!}</textarea>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">后台登录失败最大次数：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text" value="${config.allow_login_error!}"
+                               name="config.allow_login_error">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="tabCon">
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">邮件发送模式：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box  radius"> 
+					<select name="config.email_ssl" class="select  radius">
+                        @if(config.email_ssl){
+                        <option value="0">普通</option>
+                        <option value="1" selected="selected">SSL</option>
+                        @}else{
+                        <option value="0" selected="selected">普通</option>
+                        <option value="1">SSL</option>
+                        @}
+                    </select>
+					</span>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">SMTP服务器：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" name="config.email_host" value="${config.email_host!}"
+                               class="input-text  radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">SMTP 端口：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text   radius" name="config.email_port"
+                               value="${config.email_port!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">邮箱帐号：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text  radius" name="config.email_username"
+                               value="${config.email_username!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">邮箱密码：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="password" id="email-password" name="config.email_password"
+                               value="${config.email_password!}" class="input-text  radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">收件邮箱地址：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" id="email-address" name="config.email_address"
+                               value="${config.email_address!}" class="input-text  radius">
+                    </div>
+                </div>
+            </div>
+            <div class="tabCon">
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>第三方登陆：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.oauth_on){
+                        <input type="radio" name="config.oauth_on" checked="checked" value="1" id="0r2">
+                        <label for="0r2">开启</label>
+                        <input type="radio" name="config.oauth_on" value="0" id="0r22">
+                        <label for="0r22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.oauth_on" value="1" id="0r2">
+                        <label for="0r2">开启</label>
+                        <input type="radio" name="config.oauth_on" checked="checked" value="0" id="0r22">
+                        <label for="0r22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>QQ登陆：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.oauth_qq_on){
+                        <input type="radio" name="config.oauth_qq_on" value="1" checked="checked" id="qr2">
+                        <label for="qr2">开启</label>
+                        <input type="radio" name="config.oauth_qq_on" value="0" id="qr22">
+                        <label for="qr22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.oauth_qq_on" value="1" id="qr2">
+                        <label for="qr2">开启</label>
+                        <input type="radio" name="config.oauth_qq_on" value="0" checked="checked" id="qr22">
+                        <label for="qr22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">openid：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" name="config.oauth_qq_openid" value="${config.oauth_qq_openid!}"
+                               class="input-text  radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">openkey：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text  radius" name="config.oauth_qq_openkey"
+                               value="${config.oauth_qq_openkey!}">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>微博登陆：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.oauth_sina_on){
+                        <input type="radio" name="config.oauth_sina_on" checked="checked" value="1" id="sr2">
+                        <label for="sr2">开启</label>
+                        <input type="radio" name="config.oauth_sina_on" value="0" id="sr22">
+                        <label for="sr22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.oauth_sina_on" checked="checked" value="1" id="sr2">
+                        <label for="sr2">开启</label>
+                        <input type="radio" name="config.oauth_sina_on" checked="checked" value="0" id="sr22">
+                        <label for="sr22">关闭</label>
+                        @}
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">openid：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" class="input-text   radius" name="config.oauth_sina_openid"
+                               value="${config.oauth_sina_openid!}">
+                    </div>
+                </div>
+
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">openkey：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" name="config.oauth_sina_openkey" value="${config.oauth_sina_openkey!}"
+                               class="input-text  radius">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">水印开启：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        @if(config.mark_on){
+                        <input type="radio" name="config.mark_on" checked="checked" value="1" id="mr2">
+                        <label for="mr2">开启</label>
+                        <input type="radio" name="config.mark_on" value="0" id="mmr22">
+                        <label for="mmr22">关闭</label>
+                        @}else{
+                        <input type="radio" name="config.mark_on" value="1" id="mmmr2">
+                        <label for="mmmr2">开启</label>
+                        <input type="radio" name="config.mark_on" checked="checked" value="0" id="mmmr22">
+                        <label for="mmmr22">关闭</label>
+                        @}
+                    </div>
+
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">水印内容：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="text" name="config.mark_content" value="${config.mark_content!}"
+                               class="input-text  radius">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+    $(function () {
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+        $.Huitab("#tab-system .tabBar span", "#tab-system .tabCon", "current", "click", "0");
+        $("#form-config-add").validate({
+            rules: {
+                "config.admin_path": {
+                    required: true,
+                },
+                "config.password": {
+                    required: true,
+                },
+                "config.upload_allowType": {
+                    required: true,
+                },
+                "config.email_address": {
+                    required: true,
+                    email: true,
+                }
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit();
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.$('.btn-refresh').click();
+                parent.layer.close(index);
+            }
+        });
+    });
+</script>
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</
+body >
+< / html >

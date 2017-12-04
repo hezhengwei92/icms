@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <LINK rel="Bookmark" href="/favicon.ico">
+    <LINK rel="Shortcut Icon" href="/favicon.ico"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/css/style.css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>添加模型 - 模型管理 - ${powered!}</title>
+</head>
+
+<body>
+<article class="page-container">
+    <form action="${managePath}/model/save" class="form form-horizontal" id="form-model-add">
+        <input type="hidden" name="model.model_id" value="${model.model_id!}">
+        <input type="hidden" name="model.site_id" value="${session.siteId!}">
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>模型名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" name="model.model_name"
+                       value="${model.model_name!}" placeholder="模型名称">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>模型表名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                @if(isEmpty(model.model_id)){
+                <input type="text" class="input-text" name="model.table_name"
+                       value="${model.table_name!}" placeholder="模型表名 :icms_content_(建议使用字母)">
+                @}else{
+                <input type="text" readonly="readonly" class="input-text" name="model.table_name"
+                       value="${model.table_name!}" placeholder="模型表名 :icms_content_(建议使用字母)">
+                @}
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">模型类型：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<span class="select-box"> <select class="select" size="1"
+                                                      name="model.is_content">
+                        <option value="">请选择类型</option>
+                        <option value="1">内容模型</option>
+                        <option value="0">表单模型</option>
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">描述：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<textarea name="model.desc" cols="" rows="" class="textarea"
+                              placeholder="说点什么...100个字符以内" dragonfly="true"
+                              onKeyUp="textarealength(this,100)">${model.Desc!}</textarea>
+                <p class="textarea-numberbar">
+                    <em class="textarea-length">0</em>/100
+                </p>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit"
+                       value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+    $(function () {
+
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-model-add").validate({
+            rules: {
+                "model.model_name": {
+                    required: true,
+        @
+        if (isEmpty(model.model_id)) {
+            remote : "${managePath}/model/validateModelname",
+                    @
+        }
+    },
+        "model.table_name"
+        :
+        {
+            required : true,
+                    valiEnglish
+        :
+            true,
+                    @
+            if (isEmpty(model.model_id)) {
+                remote : "${managePath}/model/validateTablename",
+                        @
+            }
+        }
+        ,
+        "model.desc"
+        :
+        {
+            required : true,
+        }
+        ,
+        "model.is_content"
+        :
+        {
+            required : true,
+        }
+        ,
+
+    },
+        onkeyup : false,
+                focusCleanup
+        :
+        true,
+                success
+        :
+        "valid",
+                submitHandler
+        :
+        function (form) {
+            $(form).ajaxSubmit();
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.$('.btn-refresh').click();
+            parent.layer.close(index);
+        }
+    })
+        ;
+    });
+
+    jQuery.validator.addMethod("valiEnglish", function (value, element) {
+                return this.optional(element) || /^[a-zA-Z ]*$/.test(value);
+            }, $.validator.format("请输入字母")
+    );
+</script>
+</body>
+
+</html>

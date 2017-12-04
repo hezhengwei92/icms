@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${res!}/lib/html5.js"></script>
+    <script type="text/javascript" src="${res!}/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${res!}/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="${res!}/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/skin/default/skin.css" id="skin"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${res!}/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>添加链接</title>
+</head>
+<body>
+<article class="page-container">
+    <form action="${managePath}/menu/save" method="post" class="form form-horizontal"
+          id="form-site-add">
+        ${token!}
+        <input type="hidden" value="${menu.menu_id!}" name="menu.menu_id">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>菜单名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${menu.menu_name!}" placeholder="菜单名称"
+                       name="menu.menu_name">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>URL：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${menu.menu_url!}" placeholder="菜单链接，格式为：Controller/Action"
+                       name="menu.menu_url">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">权限：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${menu.permission!}" placeholder="权限"
+                       name="menu.permission">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">图标：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${menu.icon!}" placeholder="图标"
+                       name="menu.icon">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">排序：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${menu.sort!0}" placeholder="排序"
+                       name="menu.sort">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">是否展开：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<span class="select-box"> <select class="select" size="1"
+                                                      name="menu.is_open">
+                        <option value="0">关闭</option>
+                        <option value="1">打开</option>
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">父类菜单：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<span class="select-box"> <select class="select" size="1"
+                                                      name="menu.pid">
+                        <option value="" selected>----</option>
+                        <option value="0" style="color: red">顶级菜单</option>
+                        @for(p in ps){
+                        <option value="${p.menu_id!}">${p.menu_name}</option>
+                        @}
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit"
+                       value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+<script type="text/javascript" src="${res!}/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${res!}/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="${res!}/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#form-site-add").validate({
+            rules: {
+                "menu.menu_name": {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 16
+                },
+                "menu.menu_url": {
+                    minlength: 2,
+                },
+                "menu.sort": {
+                    number: true,
+                },
+                "menu.pid": {
+                    required: true,
+                },
+                "menu.is_open": {
+                    required: true,
+                }
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit();
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.$('.btn-refresh').click();
+                parent.layer.close(index);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet"
+          href="${ctxPath}/r/lib/zTree/v3/css/metroStyle/metroStyle.css"
+          type="text/css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>内容管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+    <i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span>
+    內容管理 <span class="c-gray en">&gt;</span>${catName!'全部'} <a class="btn btn-success radius r"
+                                                               style="line-height: 1.6em; margin-top: 3px"
+                                                               href="javascript:location.replace(location.href);"
+                                                               title="刷新"><i
+        class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="page-container">
+    <form action="${managePath}/list/${catId!}" method="POST">
+        <div class="text-c">
+		<span class="select-box inline">
+		<select name="status" class="select">
+            @if(status!=3){
+            @if(status==2){
+            <option value="2">全部</option>
+            <option value="1">发布</option>
+            <option value="0">草稿</option>
+            @}else if(status==1){
+            <option value="2">全部</option>
+            <option value="1" selected="selected">发布</option>
+            <option value="0">草稿</option>
+            @}else if(status==0){
+            <option value="2">全部</option>
+            <option value="1">发布</option>
+            <option value="0" selected="selected">草稿</option>
+            @}
+            @}else{
+            <option value="2">全部</option>
+            <option value="1">发布</option>
+            <option value="0">草稿</option>
+            @}
+        </select>
+		</span>
+            日期范围：
+            <input type="text" name="mindate" value="${mindate!}"
+                   onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin"
+                   class="input-text Wdate" style="width:120px;">
+            -
+            <input type="text" name="maxdate" value="${maxdate!}"
+                   onfocus="WdatePicker({minDate:'#F{$dp.$D(\'datemin\')}',maxDate:'%y-%M-%d'})" id="datemax"
+                   class="input-text Wdate" style="width:120px;">
+            <input type="text" name="keyword" value="${keyword!}" class="input-text" style="width:250px"
+                   placeholder="标题名称" id="" name="">
+            <button type="submit" class="btn btn-success"><i class="Hui-iconfont">&#xe665;</i> 搜内容</button>
+    </form>
+</div>
+<div class="cl pd-5    mt-20">
+			 <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i
+                     class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+				 <a href="javascript:;"
+                    onclick="ContentAdd('添加内容',${catId!'0'},'')" class="btn btn-primary radius"><i
+                         class="Hui-iconfont">&#xe600;</i> 发布内容</a></span> <span class="r">共有数据：<strong>${contentPage.totalRow!}</strong>
+					条
+				</span>
+</div>
+<table class="table table-border table-bordered table-bg  table-hover ">
+    <thead>
+    <tr class="text-c">
+        <th width="25"><input type="checkbox" name="" value=""></th>
+        <th width="20">Id</th>
+        <th width="190">标题</th>
+        <th width="70">发布时间</th>
+        <th width="60">作者</th>
+        <th width="60">浏览</th>
+        <th width="60">状态</th>
+        <th width="50">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(content in contentPage.list){
+    <tr class="text-c va-m">
+        <td><input type="checkbox" value="${content.contentId!}" name="contenId"></td>
+        <td>${content.contentId!}</td>
+        <td>${content.title!}</td>
+        <td>${content.inputdate!,"yyyy-MM-dd hh:mm"}</td>
+        <td>${content.username!}</td>
+        <td>${content.view_num!}</td>
+        <td class="td-status">
+            @if(content.Status){
+						<span
+                                class="label label-success radius">发布</span>
+            @}else{
+							 <span
+                                     class="label label-default radius">草稿</span>
+            @}
+        </td>
+        <td class="td-manage">
+            <!-- <a
+                style="text-decoration: none"
+                onClick=""
+                href="javascript:;" title="生成静态"><i class="Hui-iconfont">&#xe69f;</i></a>
+             -->
+            @if(!content.Status){
+            <a
+                    style="text-decoration: none"
+                    onClick="content_start(this,'${content.contentId!}')"
+                    href="javascript:;" title="通过"><i class="Hui-iconfont">&#xe615;</i></a>
+            @}else{
+            <a style="text-decoration: none"
+               onClick="content_stop(this,'${content.contentId!}')"
+               href="javascript:;" title="不通过"><i class="Hui-iconfont">&#xe631;</i></a>
+            @}
+            @if(catId>0){
+            <a title="编辑" href="javascript:;"
+               onclick="ContentAdd('内容编辑','${catId!}','${content.contentId!}')"
+               class="ml-5" style="text-decoration: none"><i
+                    class="Hui-iconfont">&#xe6df;</i></a>
+            @}
+            <a title="删除" href="javascript:;"
+               onclick="content_del(this,'${content.contentId!}')" class="ml-5"
+               style="text-decoration: none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+    </tr>
+    @}
+    </tbody>
+</table>
+<div id="pagenate"
+     style="padding: 5px; text-align: center; margin: 0 auto;"></div>
+</div>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="${res}/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+
+    var code;
+
+    function showCode(str) {
+        if (!code) code = $("#code");
+        code.empty();
+        code.append("<li>" + str + "</li>");
+    }
+
+    $(document).ready(function () {
+
+        laypage({
+            cont: document.getElementById('pagenate'),
+            pages: ${contentPage.totalPage!}, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
+            curr: ${contentPage.pageNumber!},
+            jump: function (e, first) { //触发分页后的回调
+                if (!first) { //一定要加此判断，否则初始时会无限刷新
+                    location.href = '${managePath}/content/list/${catId!}-' + e.curr;
+                }
+            }
+        });
+
+    });
+
+    /*删除*/
+    function content_del(obj, id) {
+        layer.confirm('确认要删除吗？', function (index) {
+            //此处请求后台程序，下方是成功后的前台处理……
+            $.post("${managePath}/content/isdel?contentId=" + id,
+                    function (data) {
+                        $(obj).parents("tr").remove();
+                        layer.msg('删除成功!', {
+                            icon: 1,
+                            time: 1000
+                        });
+                    });
+
+        });
+    }
+    /*模型-停用*/
+    function content_stop(obj, id) {
+        layer.confirm('确认要停用吗？',
+                function (index) {
+                    //此处请求后台程序，下方是成功后的前台处理……
+                    $.post("${managePath}/content/status/" + id,
+                            function (data) {
+                                $(obj)
+                                        .parents("tr")
+                                        .find(".td-manage")
+                                        .prepend(
+                                                '<a onClick="content_start(this,' + id + ')" href="javascript:;" title="启用" style="text-decoration:none"><i class="Hui-iconfont">&#xe615;</i></a>');
+                                $(obj)
+                                        .parents("tr")
+                                        .find(".td-status")
+                                        .html(
+                                                '<span class="label label-default radius">草稿</span>');
+                                $(obj).remove();
+                                layer.msg('草稿!', {
+                                    icon: 5,
+                                    time: 1000
+                                });
+
+                            });
+
+                });
+    }
+
+    /*管理员-启用*/
+    function content_start(obj, id) {
+        layer.confirm('确认要启用吗？',
+                function (index) {
+                    //此处请求后台程序，下方是成功后的前台处理……
+                    $.post("${managePath}/content/status/" + id,
+                            function (data) {
+                                $(obj)
+                                        .parents("tr")
+                                        .find(".td-manage")
+                                        .prepend(
+                                                '<a onClick="content_stop(this,' + id + ')" href="javascript:;" title="停用" style="text-decoration:none"><i class="Hui-iconfont">&#xe631;</i></a>');
+                                $(obj)
+                                        .parents("tr")
+                                        .find(".td-status")
+                                        .html(
+                                                '<span class="label label-success radius">发布</span>');
+                                $(obj).remove();
+                                layer.msg('发布!', {
+                                    icon: 6,
+                                    time: 1000
+                                });
+                            });
+                });
+
+    }
+    function ContentAdd(title, catid, contentId) {
+        if (catid == '0' && contentId == '') {
+            alert("请选择左侧栏目");
+        } else {
+            @
+            if (!isParent) {
+                var url = "${managePath}/content/input/" + catid;
+                if (contentId != '') {
+                    url = url + "-" + contentId;
+                }
+                var index = parent.layer.open({
+                    type: 2,
+                    title: title,
+                    content: url
+                });
+                parent.layer.full(index);
+                @
+            } else {
+                alert("请选择子栏目");
+                @
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="icms:war exploded">
+    <output-path>$PROJECT_DIR$/target/app</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="icms" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.12" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Maven: com.jfinal:jfinal:2.2" />
+          <element id="library" level="project" name="Maven: cglib:cglib-nodep:3.1" />
+          <element id="library" level="project" name="Maven: com.jfinal:cos:26Dec2008" />
+          <element id="library" level="project" name="Maven: com.ibeetl:beetl:2.5.2" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4-runtime:4.2" />
+          <element id="library" level="project" name="Maven: org.abego.treelayout:org.abego.treelayout.core:1.0.1" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4-annotations:4.2" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:0.2.9" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.2" />
+          <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.1" />
+          <element id="library" level="project" name="Maven: org.wisdom-framework:mysql-connector-java:5.1.34_1" />
+          <element id="library" level="project" name="Maven: org.apache.felix:org.apache.felix.ipojo.annotations:1.12.1" />
+          <element id="library" level="project" name="Maven: org.wisdom-framework:abstract-jdbc-driver:0.5" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.8.2" />
+          <element id="library" level="project" name="Maven: org.jodd:jodd-mail:3.6.6" />
+          <element id="library" level="project" name="Maven: org.jodd:jodd-core:3.6.6" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.5" />
+          <element id="library" level="project" name="Maven: org.jodd:jodd-props:3.6.6" />
+          <element id="library" level="project" name="Maven: org.jodd:jodd-http:3.6.5" />
+          <element id="library" level="project" name="Maven: org.jodd:jodd-upload:3.6.5" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.6.6" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.7" />
+          <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.4" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.4" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.2.4" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:19.0" />
+          <element id="library" level="project" name="Maven: org.fusesource:sigar:1.6.4" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.8.3" />
+          <element id="library" level="project" name="Maven: com.qiniu:qiniu-java-sdk:7.0.11" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp:okhttp:2.7.1" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.6.0" />
+          <element id="library" level="project" name="Maven: com.belerweb:pinyin4j:2.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers-common:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queryparser:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-sandbox:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-highlighter:4.10.2" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-memory:4.10.2" />
+          <element id="library" level="project" name="Maven: com.janeluo:ikanalyzer:2012_u6" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: jmagick:jmagick:6.6.9" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/app/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="icms/web/Web" />
+    </root>
+  </artifact>
+</component>

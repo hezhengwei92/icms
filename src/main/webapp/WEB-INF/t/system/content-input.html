@@ -1,0 +1,433 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${res}lib/html5.js"></script>
+    <script type="text/javascript" src="${res}lib/respond.min.js"></script>
+    <script type="text/javascript" src="${res}lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${res}/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/system/h-ui/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/lib/html5upload/html5uploader.css"/>
+    <link rel="stylesheet" type="text/css" href="${res}/lib/wangeditor/css/wangEditor.min.css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${res}/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+    <link href="${res}/lib/webuploader/0.1.5/webuploader.css"
+          rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="page-container">
+    <form action="${managePath}/content/save" method="post" class="form form-horizontal"
+          id="form-content-add">
+        <input type="hidden" value="${content.content_id!}" name="Content.content_id">
+        <input type="hidden" value="${modelId!}" name="Content.model_id">
+        <input type="hidden" value="${tableName!}" name="tableName">
+        <input id="status" type="hidden" value="${content.status!1}" name="Content.status">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span
+                    class="c-red">*</span>标题：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" class="input-text radius measure-input" value="${content.title!}"
+                       placeholder="文章标题" name="Content.title">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">关键字：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" class="input-text radius" value="${content.keywords!}"
+                       placeholder="SEO关键字用‘,’隔开" name="Content.keywords">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">描述：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+					<textarea name="Content.description" class="textarea"
+                              placeholder="SEO内容描述..." datatype="*1-100" dragonfly="true"
+                              nullmsg="备注不能为空！" onKeyUp="textarealength(this,100)">
+						${content.description!}
+						</textarea>
+                <p class="textarea-numberbar">
+                    <em class="textarea-length">0</em>/200
+                </p>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span
+                    class="c-red ">*</span>分类栏目：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+					<span class="select-box  radius"> 
+					<select name="Content.category_id" class="select">
+                        <option value="${catId!}">${catName!}</option>
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">外部链接：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" class="input-text radius" value="${content.url!}"
+                       placeholder="链接填写后打开此文章将跳入此链接" name="Content.url">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">推荐顶置：</label>
+            <div class="formControls col-xs-7 col-sm-7 skin-minimal">
+                <div class="check-box  radius">
+                    <input type="checkbox" id="checkbox-1" value="true" name="Content.recommend"><label
+                        for="checkbox-1"> 推荐 </label>
+                </div>
+                <div class="check-box  radius">
+                    <input type="checkbox" id="checkbox-2" value="true" name="Content.top"> <label
+                        for="checkbox-2"> 顶置 </label>
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">浏览次数：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="Content.view_num" value="${content.view_num!'0'}" class="input-text  radius"
+                       placeholder="浏览次数" style="width: 200px;">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">文章作者：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text  radius " name="Content.username" value="${content.username!}"
+                       placeholder="文章作者" style="width: 200px;">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">封面图片：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" name="Content.thumb" id="thumb" placeholder="图片地址" value="${content.thumb!}"
+                       class="input-text  radius" style="margin-bottom:5px">
+                <div class="uploader-thum-container">
+                    <div id="thumbs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">Tag：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" name="tag" placeholder="多个Tag请用 “#”隔开" class="input-text  radius">
+            </div>
+        </div>
+        @for(mf in modelFileds){
+
+        @if(mf.filed_class=='input'){
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">${mf.alias!}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" name="${mf.filed_name!}" placeholder="文章来源" value="${mf.filed_value!}"
+                       class="input-text  radius">
+            </div>
+        </div>
+        @}else if(mf.filed_class=='textarea'){
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">${mf.alias!}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+					<textarea name="${mf.filed_name!}" class="textarea  radius"
+                              placeholder="${mf.alias!}" datatype="*1-100" dragonfly="true"
+                              nullmsg="不能为空！" onKeyUp="textarealength(this,200)">
+						@if(isEmpty(content[mf.filed_name])){
+                          ${mf.filed_value}
+                        @}else{
+                          ${content[mf.filed_name]}
+                        @}
+						</textarea>
+                <p class="textarea-numberbar">
+                    <em class="textarea-length">0</em>/200
+                </p>
+            </div>
+        </div>
+
+
+        @}else if(mf.filed_class=='radio'){
+        @var flist = SplitStr(mf.filed_value,'#');
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span
+                    class="c-red ">*</span>${mf.alias!}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                  
+					<span class="select-box  radius"> 
+					<select name="${mf.filed_name!}" class="select  radius">
+                        <option value="">--请选择--</option>
+                        @for(fv in flist){
+                        @if(!isEmpty(content[mf.filed_name])&&content[mf.filed_name]==fv){
+                        <option value="${fv!}" selected="selected">${fv!}</option>
+                        @}else{
+                        <option value="${fv!}">${fv!}</option>
+                        @}
+                        @}
+                    </select>
+					</span>
+            </div>
+        </div>
+
+        @}else if(mf.filed_class=='picture'){
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">${mf.alias!}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <div class="uploader-list-container">
+                    <div class="queueList">
+                        <div id="dndArea" class="placeholder">
+                            <div id="filePicker-2"></div>
+                            <p>或将照片拖到这里，单次最多可选300张</p>
+                        </div>
+                    </div>
+                    <input id="mf" name="${mf.filed_name!}" style="display: none;" type="text"
+                           value="${content[mf.filed_name]!}">
+                    <div class="statusBar" style="display: none;">
+                        <div class="progress">
+                            <span class="text">0%</span> <span class="percentage"></span>
+                        </div>
+                        <div class="info"></div>
+                        <div class="btns">
+                            <div id="filePicker2"></div>
+                            <div class="uploadBtn">开始上传</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @}else if(mf.filed_class=='file'){
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">${mf.alias}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+                <input type="text" name="${mf.filed_name}" id="${mf.filed_name}" placeholder="${mf.alias}"
+                       value="${content[mf.filed_name]}"
+                       class="input-text" style="margin-bottom:5px">
+                <div class="uploader-thum-container">
+                    <div id="${mf.filed_name}s"></div>
+                </div>
+            </div>
+        </div>
+
+        @}else if(mf.filed_class=='editor'){
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">${mf.alias!}：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+					<textarea name="${mf.filed_name!}" id="${mf.filed_name!}" rows="50"
+                              style="width:100%;height:400px;">
+                       @if(isEmpty(content[mf.filed_name])){
+                          ${mf.filed_value}
+                       @}else{
+                          ${content[mf.filed_name]}
+                       @}
+                    </textarea>
+            </div>
+        </div>
+        @}
+        @}
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">内容：</label>
+            <div class="formControls col-xs-7 col-sm-8">
+					<textarea name="Content.content" id="content" rows="50" style="height:350px;max-height:500px;">
+                     ${Content.content!}
+                    </textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="article_save_submit();"
+                        class="btn btn-primary radius" type="submit">
+                    <i class="Hui-iconfont">&#xe632;</i> 保存并提交审核
+                </button>
+                <button onClick="article_save();" class="btn btn-secondary radius"
+                        type="submit">
+                    <i class="Hui-iconfont">&#xe632;</i> 保存草稿
+                </button>
+                <button onClick="layer_close();" class="btn btn-default radius"
+                        type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/js/content.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/html5upload/jquery.html5uploader.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="${res}/lib/wangeditor/js/wangEditor.min.js"></script>
+<script type="text/javascript">
+    //相册上传
+    function uploadThumb() {
+        $('#thumbs').html5uploader({
+            auto: false,
+            multi: false,
+            url: '${managePath}/file/upload',
+            onUploadSuccess: function (file, result) {
+                jsonobj = eval('(' + result + ')');
+                $('#thumb').val(jsonobj.url);
+            }
+        });
+    }
+    //表单验证
+    function validateForm() {
+        var form = $('#form-content-add');
+        form.validate({
+            rules: {
+                "Content.title": {
+                    required: true,
+                },
+                "Content.url": {
+                    url: true,
+                },
+                "Content.view_num": {
+                    digits: true,
+                },
+                "Content.username": {
+                    required: true,
+                },
+                "Content.content": {
+                    required: true,
+                },
+        @
+        for (mf in modelFileds) {
+            @
+            if (mf.not_null) {
+                "${mf.filed_name}"
+            :
+                {
+                    required:true,
+                }
+            ,
+                @
+            }
+            @
+        }
+    },
+        onkeyup:false,
+                focusCleanup
+    :
+        true,
+                success
+    :
+        "valid",
+                submitHandler
+    :
+        function (form) {
+            form.submit();
+        }
+    })
+        ;
+
+    }
+
+    function article_save_submit() {
+        $("#status").val("1");
+    }
+
+    function article_save() {
+        $("#status").val("0");
+    }
+
+    function contentEditor() {
+
+        var textarea = document.getElementById('content');
+        var editor = new wangEditor(textarea);
+        editor.config.uploadImgUrl = '${managePath}/wangeditor/upload';
+        editor.create();
+        $(".wangEditor-txt").height("303px");
+
+    }
+
+    (function ($) {
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+        // 当domReady的时候开始初始化
+        validateForm();
+        uploadThumb();
+        contentEditor();
+        @
+        for (mf in modelFileds) {
+            @
+            if (mf.filed_class == 'editor') {
+                var textarea = document.getElementById('${mf.filed_name!}');
+                var editor$
+                {
+                    mf.filed_name
+                    !
+                }
+                = new wangEditor(textarea);
+                editor$
+                {
+                    mf.filed_name
+                    !
+                }
+            .
+                config.uploadImgUrl = '${managePath}/wangeditor/upload';
+                editor$
+                {
+                    mf.filed_name
+                    !
+                }
+            .
+                create();
+                $(".wangEditor-txt").height("303px");
+                @
+            } else if (mf.filed_class == 'file') {
+                $('#${mf.filed_name}s').html5uploader({
+                    auto: false,
+                    multi: false,
+                    url: '${managePath}/file/upload',
+                    onUploadSuccess: function (file, result) {
+                        jsonobj = eval('(' + result + ')');
+                        $('#${mf.filed_name}').val(jsonobj.url);
+                    }
+                });
+                @
+            } else if (mf.filed_class == 'picture') {
+                ContentInput.init();
+                @
+            }
+            @
+        }
+    })(jQuery);
+</script>
+</body>
+</html>

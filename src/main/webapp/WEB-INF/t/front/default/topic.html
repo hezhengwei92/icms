@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${title!} - ${siteName!}</title>
+</head>
+<body>
+${tagCount!}
+tag：
+<#cms_tag_list count="10" order="1"  var="tag"> 
+<a href="">${tag.tagName!}(${tag.count!})</a>
+</#cms_tag_list> 
+</body>
+</html>

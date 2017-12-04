@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${res!}/lib/html5.js"></script>
+    <script type="text/javascript" src="${res!}/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${res!}/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="${res!}/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res}/lib/html5upload/html5uploader.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/skin/default/skin.css" id="skin"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${res!}/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>添加链接</title>
+</head>
+<body>
+<article class="page-container">
+    <form action="${managePath}/link/save" method="post" class="form form-horizontal"
+          id="form-link-add">
+        ${token!}
+        <input type="hidden" value="${link.link_id!}" name="link.link_id">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>链接名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${link.name!}" placeholder="链接名称"
+                       name="link.name">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>链接地址：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${link.url!}" placeholder="链接名称"
+                       name="link.url">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>排序：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${link.sort!}" placeholder="链接名称"
+                       name="link.sort">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">链接图片：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" name="link.img" id="thumb"
+                       placeholder="图片地址" value="${link.img!}"
+                       class="input-text  radius" style="margin-bottom: 5px">
+                <div class="uploader-thum-container">
+                    <div id="thumbs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">链接状态：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<span class="select-box"> <select class="select" size="1"
+                                                      name="link.status">
+                        <option value="" selected>请选择类型</option>
+                        <option value="1">启用</option>
+                        <option value="0">停用</option>
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit"
+                       value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+<script type="text/javascript" src="${res!}/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${res!}/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="${res!}/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/html5upload/jquery.html5uploader.js"></script>
+
+<script type="text/javascript">
+    function uploadThumb() {
+        $('#thumbs').html5uploader({
+            auto: false,
+            multi: false,
+            url: '${managePath}/file/upload',
+            onUploadSuccess: function (file, result) {
+                jsonobj = eval('(' + result + ')');
+                $('#thumb').val(jsonobj.url);
+            }
+        });
+    }
+    $(function () {
+        uploadThumb();
+        $("#form-link-add").validate({
+            rules: {
+                "link.name": {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 16
+                },
+                "link.url": {
+                    required: true,
+                    url: true,
+                },
+                "link.status": {
+                    required: true,
+                },
+                "link.sort": {
+                    required: true,
+                },
+
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit();
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.$('.btn-refresh').click();
+                parent.layer.close(index);
+            }
+        });
+    });
+</script>
+</body>
+</html>

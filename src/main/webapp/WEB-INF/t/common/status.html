@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>${info!}</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        img {
+            width: 128PX;
+            height: 128PX;
+        }
+
+        a {
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<img src="${ctxPath}/r/system/images/${status}.png">
+<br>
+@if(isEmpty(url)){
+<a onclick="CloseWindow()" href="javascript:;">${info!}，点击关闭！</a>
+@}else{
+<a onclick="RefreshWindow()" href="javascript:;">${info!}，点击关闭！</a>
+@}
+</body>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+            @
+            if (isEmpty(url)) {
+                CloseWindow();
+                @
+            } else {
+                RefreshWindow();
+                @
+            }
+        }, 3000);
+    });
+    function CloseWindow() {
+        window.parent.location.reload();
+    }
+    function RefreshWindow() {
+        window.parent.location.href = "${url!}"
+    }
+
+</script>
+</html>

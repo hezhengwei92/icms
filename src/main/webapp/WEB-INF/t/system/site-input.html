@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${res!}/lib/html5.js"></script>
+    <script type="text/javascript" src="${res!}/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${res!}/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="${res!}/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${res!}/system/h-ui/skin/default/skin.css" id="skin"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${res!}/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>添加链接</title>
+</head>
+<body>
+<article class="page-container">
+    <form action="${managePath}/site/save" method="post" class="form form-horizontal"
+          id="form-site-add">
+        ${token!}
+        <input type="hidden" value="${site.site_id!}" name="site.site_id">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>站点名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.sitename!}" placeholder="站点名称"
+                       name="site.sitename">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>域名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.domain!}" placeholder="域名；请不要填写 http前缀"
+                       name="site.domain">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>Title：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.title!}" placeholder="站点名称"
+                       name="site.sitename">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>keyword：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.keyword!}" placeholder="站点名称"
+                       name="site.sitename">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>description：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.description!}" placeholder="站点名称"
+                       name="site.sitename">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>模版：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.template!}" placeholder="模版"
+                       name="site.template">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span
+                    class="c-red">*</span>手机模版：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="${site.mobile_tpl!}" placeholder="模版"
+                       name="site.mobile_tpl">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">开启手机：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+					<span class="select-box"> <select class="select" size="1"
+                                                      name="is_mobile">
+                        <option value="" selected>请选择类型</option>
+                        <option value="1">启用</option>
+                        <option value="0">停用</option>
+                    </select>
+					</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit"
+                       value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+<script type="text/javascript" src="${res!}/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${res!}/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="${res!}/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="${res!}/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="${res!}/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#form-site-add").validate({
+                    rules: {
+                        "site.sitename": {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 16
+                        },
+                        "site.domain": {
+                            required: true,
+                        },
+                        "site.template": {
+                            required: true,
+                        },
+                        "site.mobile_tpl": {
+                            required: true,
+                        },,
+                    "site.is_mobile": {
+                        required: true,
+                    },
+
+                },
+                onkeyup
+        :
+        false,
+                focusCleanup
+        :
+        true,
+                success
+        :
+        "valid",
+                submitHandler
+        :
+        function (form) {
+            $(form).ajaxSubmit();
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.$('.btn-refresh').click();
+            parent.layer.close(index);
+        }
+    })
+        ;
+    });
+</script>
+</body>
+</html>

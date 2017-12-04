@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="${ctxPath}/r/system/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctxPath}/r/system/h-ui/css/H-ui.login.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台登录 - ${powered!}</title>
+</head>
+
+<body>
+
+<div class="loginWraper">
+    <div class="error-alert Huialert Huialert-error hidden"></div>
+    <div class="loginBox">
+        <div class="logo"></div>
+        @if(!isEmpty(msg)){
+        <div style="margin-top:20px;text-align:center" class="Huialert Huialert-success">${msg!}</div>
+        @}
+        <form id="loginform" class="form form-horizontal" action="${managePath}/login" method="post">
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+                <div class="formControls col-xs-8">
+                    @if(isEmpty(username)){
+                    <input name="username" type="text" value="${username!}" placeholder="账户" class="input-text size-L">
+                    @}else{
+                    <input name="username" type="text" value="${username!}" placeholder="账户" class="input-text size-L"
+                           readonly="readonly">
+                    @}
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+                <div class="formControls col-xs-8">
+                    <input name="password" value="123456" type="password" placeholder="密码" class="input-text size-L">
+                </div>
+            </div>
+            @if(isEmpty(username)){
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe68f;</i></label>
+                <div class="formControls col-xs-8">
+                    <input id="verify-input" class="input-text size-L" name="verifycode" type="text" placeholder="验证码"
+                           style="width:150px;">
+                    <img class="hidden" height="40px" id="verifyImg" src="${ctxPath}/verify/captchaImg"></div>
+            </div>
+            @}
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <label for="online">
+                        <input type="checkbox" name="remberme" id="online"
+                               @if(!isEmpty(username)){
+                               checked="checked"
+                               @}
+                        > 使我保持登录状态
+                    </label>
+                </div>
+            </div>
+
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <input type="submit" class="btn btn-success  size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+                    <input type="reset" class="btn btn-default  size-L" value="&nbsp;清&nbsp;&nbsp;&nbsp;&nbsp;空&nbsp;">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/js/login.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script>
+    function showSuccessTips(msg) {
+        var error = $('.error-alert');
+        error.html(msg);
+        error.removeClass('Huialert-error');
+        error.addClass("Huialert-success");
+        error.removeClass('hidden');
+        setTimeout(function () {
+            error.addClass("hidden");
+            window.location.href = "${managePath}";
+        }, 2000);
+    }
+    jQuery(document).ready(function () {
+        Login.init();
+    });
+</script>
+</body>
+
+</html>

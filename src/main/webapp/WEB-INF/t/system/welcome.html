@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/r/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/r/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/r/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxPath}/r/system/h-ui/skin/default/skin.css" id="skin"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>信息首页</title>
+</head>
+<body>
+<div class="page-container">
+    <p class="f-20 text-success">欢迎进入后台管理系统！</p>
+    <p>登录次数：${loginSum!}</p>
+    <p>上次登录IP：${lastIp!} 上次离开时间：${lastDate!,"yyyy-MM-dd hh:mm:ss"}</p>
+    <table class="table table-border table-bordered table-bg">
+        <thead>
+
+        <tr class="text-c">
+            <th>统计</th>
+            <th>文章</th>
+            <th>用户</th>
+            <th>评论</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="text-c">
+            <td>总数</td>
+            <td>92</td>
+            <td>8</td>
+            <td>20</td>
+        </tr>
+        <tr class="text-c">
+            <td>今日</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr class="text-c">
+            <td>未审核</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-border table-bordered table-bg mt-20">
+        <thead>
+        <tr>
+            <th colspan="2" scope="col">服务器信息</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>服务器IP</td>
+            <td>${system.ip!}</td>
+        </tr>
+        <tr>
+            <td>域名</td>
+            <td>${system.domain!}</td>
+        </tr>
+        <tr>
+            <td>Web 部署路径</td>
+            <td>${system.appDir!}</td>
+        </tr>
+        <tr>
+            <td>服务器操作系统</td>
+            <td>${system.osName!}</td>
+        </tr>
+        <tr>
+            <td>JAVA 版本</td>
+            <td>${system.javaVersion!}</td>
+        </tr>
+        <tr>
+            <td>JRE 路径</td>
+            <td>${system.javaHome!}</td>
+        </tr>
+        <tr>
+            <td>服务器时间</td>
+            <td>${system.serverDate!,"yyyy-MM-dd hh:mm:ss"}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="footer mt-20">
+    <div class="container">
+        <p> &copy;2016 icms v0.1 All Rights Reserved.<br>
+    </div>
+</footer>
+<script type="text/javascript" src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+</body>
+</html>

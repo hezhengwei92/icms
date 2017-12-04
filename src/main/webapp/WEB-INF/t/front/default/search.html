@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<font size="8">搜索词：${keyword!}</font>
+<br>
+<br>
+搜索结果：<b>${page.totalRow!}</b> 条
+<#cms_lucene_page page="${page}"  var="content"> 
+
+<br>
+<br>
+Id:${content.id!} - ${content.title!}<br>
+--------------------------------------------------------------------------------
+<br>
+${content.content!}
+<br>
+--------------------------------------------------------------------------------
+<br>
+${content.url!}
+<br>
+</#cms_lucene_page>
+<br>
+<br>
+<#cms_pagination siteId="${siteId!0}" channelId="${channelId!}" page="${page!}" action="${action!}"  var="page" > 
+${page.last}
+@for( change in page.changePage){
+@if(!change.isLink){
+${change.value!}
+@}else{
+${change.url!}
+@}
+@}
+${page.next}
+</#cms_pagination>  
+</body>
+</html>

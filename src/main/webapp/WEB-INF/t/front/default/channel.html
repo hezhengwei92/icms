@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+news
+内容列表标签<br>
+###################################
+<#cms_content_list channelId="7" channelOption="0" orderBy="1" siteId="1" titleLen="5" target="1" recommend="1" isHot="0" var="content">
+   <br> <a href="${content.url!}">${content.title!}</a><br>
+</#cms_content_list> 
+###################################
+<br>
+分类调用
+<br>
+<br>
+<br>
+栏目分类标签
+<br>
+###################################
+<br>
+<#cms_channel siteId="1" channelId="7" isMore="0" var="channel">
+  <br> <a  href="${channel.url!}">${channel.name!}</a><br>
+</#cms_channel> 
+<br>
+###################################
+<br>
+<br>
+<br>
+栏目列表
+ <br>
+###################################
+<br>
+<#cms_channel_list siteId="1" parentId="7" isNav="1" var="channel">
+  <br> <a  href="${channel.url!}">${channel.name!}</a><br>
+</#cms_channel_list> 
+<br>
+###################################
+<br>
+<br>
+<br>
+内容标签
+<br>
+###################################
+<br>
+上一篇：
+<#cms_content siteId="1" channelId="${channelId!}" titleLen="5" contentId="${contentId!}" next="1"  var="content">
+   @if(content!=null){
+  <a  href="${content.url!}">${content.title!}</a><br>
+   @}else{
+       没有啦
+   @}
+</#cms_content>
+<br>
+下一篇：
+<#cms_content siteId="1" channelId="${channelId!}" titleLen="5" contentId="${contentId!}" next="0" var="content">
+   @if(content!=null){
+  <a  href="${content.url!}">${content.title!}</a><br>
+   @}else{
+       没有啦
+   @}
+</#cms_content> 
+###################################
+<br>
+<br>
+处理时间：${processTime!}
+<br>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${title!}</title>
+
+</head>
+<body>
+Keyword:${keyword!}<br>
+description:${description!}
+域名：${basePath!}<BR>
+----------------------------------------------------------------------------
+<BR>
+tag：
+<BR>
+<#cms_tag_list count="10" order="0"  var="tag"> 
+<a href="">${tag.tagName!}()</a>
+<BR>
+</#cms_tag_list> 
+----------------------------------------------------------------------------
+<BR>
+Topic
+<BR>
+<#cms_topic_list count="10" order="1"  var="topic"> 
+<BR>
+----------------------------------------------------------------------------
+
+<BR>
+----------------------------------------------------------------------------
+<BR>
+<a href=""><img width="120" hight="80" alt="${topic.short_name!}" src="${topic.title_img!}"></a>
+<BR>
+----------------------------------------------------------------------------
+<BR>
+</#cms_topic_list> 
+</body>
+</html>

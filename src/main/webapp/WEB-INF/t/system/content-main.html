@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="${ctxPath}/r/lib/html5.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/respond.min.js"></script>
+    <script type="text/javascript" src="${ctxPath}/r/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/lib/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="${ctxPath}/r/system/h-ui/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet"
+          href="${ctxPath}/r/lib/zTree/v3/css/metroStyle/metroStyle.css"
+          type="text/css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>内容管理</title>
+</head>
+<body>
+
+<div class="pos-a"
+     style="width: 170px; left: 0; bottom: 0; height: 100%; border-right: 1px solid #e5e5e5; background-color: #f5f5f5">
+    <ul id="treeDemo" class="ztree">
+    </ul>
+</div>
+<div style="margin-left: 170px;">
+    <IFRAME ID="catInput" Name="catInput" FRAMEBORDER="0" SCROLLING="NO" width="100%" height="600px"
+            SRC="${managePath}/content/list"></IFRAME>
+</div>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="${res}/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.js"></script>
+<script type="text/javascript"
+        src="${ctxPath}/r/system/h-ui/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+    var setting = {
+        async: {
+            enable: true,
+            url: "${managePath}/content/getCategoryList",
+            autoParam: ["id"],
+            otherParam: {"otherParam": "zTreeAsyncTest"}
+        },
+        view: {
+            dblClickExpand: false,
+            showLine: true,
+            selectedMulti: false
+        },
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+        callback: {
+            onClick: onClick
+        }
+    };
+
+
+    function onClick(event, treeId, treeNode, clickFlag) {
+        var zTree = $.fn.zTree.getZTreeObj("tree");
+        var catInput = $("#catInput");
+        if (treeNode.id != 0) {
+            //alert(treeNode.id);
+            catInput.attr("src", "${managePath}/content/list/" + treeNode.id);
+            return true;
+        }
+        return false;
+    }
+
+
+    $(document).ready(function () {
+        var t = $("#treeDemo");
+        t = $.fn.zTree.init(t, setting);
+    });
+</script>
+</body>
+</html>
